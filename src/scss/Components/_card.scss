@@ -1,0 +1,125 @@
+.goods {
+  width: 100%;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  padding: 14px 20px 38px 19px;
+  margin: 0 auto;
+
+  border: 2px solid $card-border-color;
+  border-radius: 3px;
+
+  @media screen and (max-width: 767px) {
+    max-width: 276px;
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    margin-top: 7.5px;
+    margin-bottom: 7.5px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    width: calc((100% - 4 * 7.5px) / 2);
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    width: calc((100% - 6 * 7.5px) / 3);
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1400px) {
+    width: calc((100% - 8 * 7.5px) / 4);
+  }
+  @media screen and (min-width: 1400px) {
+    width: calc((100% - 10 * 7.5px) / 5);
+  }
+
+  &__picture {
+    margin-bottom: 10px;
+  }
+
+  &__label {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+
+    display: inline-block;
+    padding: 5px 43px 5px 21px;
+    align-items: center;
+
+    @include font(18px, $white-color, 500, 1);
+
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 3px;
+    
+    &--blue {
+      background-color: $top-bcg-color-blue;
+    }
+
+    &--purple {
+      background-color: $top-bcg-color-purple;
+    }
+  }
+
+  &__actions {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 50px;
+    height: 40px;
+
+    background-color: inherit;
+    border: none;
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+    }
+  }
+
+  &__rating {
+    @include flex(flex, row, wrap, center, flex-start);
+    margin-bottom: 9px;
+  }
+
+  &__reviews {
+    display: inline-block;
+
+    text-decoration: none;
+    @include font(14px, $permanent-dark-blue-color, 500, 16.8px);
+  }
+
+  &__heading {
+    display: inline-block;
+    margin-bottom: 11px;
+
+    .text {
+      @include font(18px, $permanent-dark-blue-color, 400, 24px);
+    }
+
+    .title {
+      @include font(14px, $active-card-color, 500, 24px);
+    }
+  }
+}
+
+.price {
+  @include flex(flex, row, nowrap, center, space-between);
+  &__value {
+    @include font(20px, $permanent-dark-blue-color, 700, 28.8px);
+  }
+
+  .currency {
+    font-weight: 300;
+  }
+}
+
+.available {
+  @include flex(flex, row, wrap, center, space-between);
+
+  &__item {
+    margin-left: 9px;
+    
+    @include font(16px, $active-card-color, 500, 19.2px);
+    text-align: right;
+  }
+}

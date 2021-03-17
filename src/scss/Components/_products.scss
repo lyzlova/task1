@@ -1,0 +1,37 @@
+.content {
+  padding: 20px 20px 24px;
+
+  background: linear-gradient(180deg, $active-card-color 0%, $white-color 70%);
+  box-shadow: 0px 4px 4px $shadow-color;
+  @media screen and (min-width: 420px) {
+    padding: 40px 40px 50px;
+  }
+}
+
+.products {
+  @include flex(flex, column, wrap, center, center);
+  padding: 20px;
+  margin: 0 auto;
+  
+  background-color: $white-color;
+  @media screen and (min-width: 420px) {
+    padding: 40px 40px 290px;
+  }
+
+  &__title {
+    align-self: flex-start;
+    margin-bottom: 30px;
+    @include font(30px, $permanent-dark-blue-color, 400, 36px);
+  }
+}
+
+.catalog {
+  margin-top: -7.5px;
+  margin-bottom: -7.5px;
+  padding-bottom: 50px;
+
+  list-style: none;
+  @media (min-width: 480px) {
+    @include flex(flex, row, wrap, center, center);
+  }
+}
