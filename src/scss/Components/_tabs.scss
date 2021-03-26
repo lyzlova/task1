@@ -1,0 +1,55 @@
+.tabs {
+  border-bottom: 1px solid $border-not-active-pagination;
+
+  &__list {
+    @include flex(flex, row, nowrap, center, flex-start);
+    @extend %list;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      padding: 0 10px;
+
+      @media screen and (min-width: 768px) {
+        padding: 0 20px;
+      }
+    }
+
+    &.is-active {
+      margin-bottom: -1px;
+      border-bottom: 1px solid $tabs-active-color;
+
+      a {
+        color: $tabs-active-color;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 8px 0 13px;
+    @include font(12px, $permanent-dark-blue-color, 500, 14px);
+
+    @media screen and (min-width: 768px) {
+      padding: 10px 0 15px;
+      @include font(16px, $permanent-dark-blue-color, 500, 19.2px);
+    }
+  }
+}
+
+.tab {
+  display: none;
+}
+
+.tab.is-active {
+  display: flex;
+}
+
+.tab-content {
+  @include flex(flex, row, wrap, center, flex-start);
+  padding: 10px 0;
+}
+
+.tabs__item span {
+  color: $slider-border-color;
+}

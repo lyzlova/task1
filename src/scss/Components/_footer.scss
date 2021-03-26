@@ -1,0 +1,132 @@
+.footer {
+  background-color: $subscribe-bcg-color;
+}
+
+.footer-top {
+  @include flex(flex, column, wrap, flex-start, space-between);
+  padding: 33px 20px;
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    flex-direction: row;
+  }
+
+  @media screen and (min-width: 1024px) {
+    @include flex(flex, row, nowrap, flex-start, space-between);
+  }
+}
+
+.footer-column {
+  @include flex(flex, column, nowrap, flex-start, space-between);
+
+  @media screen and (max-width: 1199px) {
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &:not(:first-child) {
+      width: 18%;
+    }
+  }
+
+  &__logo {
+    margin-right: 25px;
+  }
+  &__title {
+    @include font(18px, $white-color, 500, 21.09px);
+    margin-bottom: 18px;
+  }
+
+  &__list {
+    @extend %list;
+  }
+
+  &__link {
+    @include font(14px, $white-color, 400, 18px);
+    opacity: 0.5;
+  }
+}
+
+.column-one {
+  align-self: center;
+
+  &__top {
+    @include flex(flex, column, nowrap, center, space-between);
+    align-self: center;
+  }
+
+  &__title {
+    font-family: "Nunito", sans-serif;
+    @include font(16px, $white-color, 700, 20px);
+  }
+}
+
+.footer-bottom {
+  @include flex(flex, row, nowrap, center, space-between);
+  padding: 27px 20px 33px;
+
+  @include font(14px, $white-color, 400, 18px);
+  opacity: 0.5;
+  border-top: 1px solid $permanent-dark-blue-color;
+
+  &__website {
+    &--nunito {
+      font-family: "Nunito", sans-serif;
+    }
+  }
+}
+
+.social {
+  &__list {
+    @include flex(flex, row, nowrap, center, space-between);
+    align-self: center;
+    margin: 35px 0;
+    width: 163px;
+    @extend %list;
+  }
+}
+
+.payment-delivery {
+  @include flex(flex, column, nowrap, center, space-between);
+
+  @media screen and (min-width: 1024px) {
+    @include flex(flex, row, nowrap, center, space-between);
+  }
+
+  &__link {
+    @media screen and (min-width: 1200px) {
+      margin-right: 57.28px;
+    }
+  }
+}
+
+.payment {
+  &__list {
+    @include flex(flex, row, nowrap, center, space-between);
+    width: 230px;
+    @extend %list;
+  }
+}
+
+.footer-contacts {
+  .main-contact-link {
+    display: inline-block;
+    margin-bottom: 12px;
+    @include font(24px, $white-color, 500, 28px);
+    opacity: 0.7;
+
+    @media screen and (max-width: 1023px) {
+      @include font(18px, $white-color, 500, 28px);
+    }
+  }
+
+  &__list {
+    @extend %list;
+  }
+
+  &__link {
+    @include font(18px, $white-color, 500, 21px);
+    opacity: 0.7;
+  }
+}

@@ -1,0 +1,78 @@
+.characteristics {
+  @include flex(flex, column, nowrap, flex-start, flex-start);
+  min-width: 280px;
+  width: 100%;
+
+  &__heading {
+    @include flex(flex, row, nowrap, flex-start, flex-start);
+    margin-bottom: 32px;
+
+    &--green {
+      display: inline-block;
+      align-self: start;
+      margin-left: 8px;
+
+      font-family: "Nunito", sans-serif;
+      @include font(20px, $active-card-color, 400, 20px);
+
+      @media screen and (min-width: 768px) {
+        @include font(30px, $active-card-color, 500, 36px);
+      }
+    }
+  }
+
+  &__button {
+    @include flex(flex, row, nowrap, center, flex-start);
+
+    @include font(16px, $permanent-dark-blue-color, 500, 24px);
+
+    span {
+      display: inline-block;
+      border-bottom: 1px solid rgba(92, 109, 125, 0.5);
+      margin-right: 6px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 30px;
+  }
+}
+
+.characteristics-full {
+  &__list {
+    @include flex(flex, column, nowrap, flex-start, flex-start);
+    margin-bottom: 15px;
+    @extend %list;
+  }
+
+  tr {
+    border-bottom: 1px solid $border-not-active-pagination;
+  }
+
+  &__label {
+    position: relative;
+    width: 516px;
+    @include font(16px, $permanent-dark-blue-color, 500, 30px);
+
+    &::before {
+      position: absolute;
+      width: 100%;
+      bottom: 10px;
+      content: "";
+      border-bottom: 1px dotted $border-not-active-pagination;
+    }
+
+    span {
+      position: relative;
+      display: inline-block;
+      padding-right: 16px;
+      background-color: $white-color;
+    }
+  }
+
+  &__value {
+    padding-left: 16px;
+    
+    @include font(16px, $permanent-dark-blue-color, 400, 30px);
+  }
+}

@@ -1,6 +1,6 @@
 .goods {
-  width: 100%;
   position: relative;
+  width: 276px;
 
   display: flex;
   flex-direction: column;
@@ -9,29 +9,6 @@
 
   border: 2px solid $card-border-color;
   border-radius: 3px;
-
-  @media screen and (max-width: 767px) {
-    max-width: 276px;
-    &:not(:last-child) {
-      margin-bottom: 15px;
-    }
-  }
-  @media screen and (min-width: 768px) {
-    margin-top: 7.5px;
-    margin-bottom: 7.5px;
-  }
-  @media screen and (min-width: 768px) and (max-width: 991px) {
-    width: calc((100% - 4 * 7.5px) / 2);
-  }
-  @media screen and (min-width: 992px) and (max-width: 1199px) {
-    width: calc((100% - 6 * 7.5px) / 3);
-  }
-  @media screen and (min-width: 1200px) and (max-width: 1400px) {
-    width: calc((100% - 8 * 7.5px) / 4);
-  }
-  @media screen and (min-width: 1400px) {
-    width: calc((100% - 10 * 7.5px) / 5);
-  }
 
   &__picture {
     margin-bottom: 10px;
@@ -50,17 +27,17 @@
 
     border-bottom-right-radius: 10px;
     border-top-left-radius: 3px;
-    
-    &--blue {
-      background-color: $top-bcg-color-blue;
-    }
-
-    &--purple {
-      background-color: $top-bcg-color-purple;
-    }
   }
 
-  &__actions {
+  .label-blue {
+    background-color: $top-bcg-color-blue;
+  }
+
+  .label-purple {
+    background-color: $top-bcg-color-purple;
+  }
+
+  &__button {
     position: absolute;
     top: 0;
     right: 0;
@@ -100,6 +77,14 @@
       @include font(14px, $active-card-color, 500, 24px);
     }
   }
+
+  &__code {
+    @include font(14px, $permanent-blue-smoke-color-pagination, 500, 16.8px);
+    &--accent {
+      @include font(14px, $permanent-blue-smoke-color-pagination, 600, 16.8px);
+      font-family: "Nunito", sans-serif;
+    }
+  }
 }
 
 .price {
@@ -118,7 +103,7 @@
 
   &__item {
     margin-left: 9px;
-    
+
     @include font(16px, $active-card-color, 500, 19.2px);
     text-align: right;
   }

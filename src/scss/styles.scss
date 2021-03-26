@@ -1,10 +1,26 @@
+@import "./Components/swiper";
+@import "./base/normalize";
+
+
 @import "./base/vissualy-hidden";
 @import "./base/main";
 
 @import "./utils/placeholder";
 @import "./utils/variables";
 @import "./utils/mixins";
+@import "./utils/text";
+
+@import "./Components/about-product.scss";
+@import "./Components/tabs.scss";
+@import "./Components/control.scss";
+@import "./Components/accordion.scss";
+@import "./Components/reviews.scss";
+@import "./Components/characteristics.scss";
+@import "./Components/description.scss";
 
 @import "./Components/products.scss";
 @import "./Components/card.scss";
 @import "./Components/slider.scss";
+
+@import "./Components/subscribe.scss";
+@import "./Components/footer.scss";

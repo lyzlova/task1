@@ -1,0 +1,7 @@
+.title {
+  @include font(20px, $permanent-dark-blue-color, 400, 20px);
+
+  @media screen and (min-width: 768px) {
+    @include font(30px, $permanent-dark-blue-color, 400, 36px);
+  }
+}

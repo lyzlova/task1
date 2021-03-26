@@ -1,0 +1,46 @@
+.accordion {
+  width: 100%;
+  max-width: 589px;
+  margin-bottom: 93px;
+
+  &__list {
+    @extend %list;
+  }
+
+  &__item {
+    padding: 30px 13px 28px;
+
+    border-top: 1px solid $border-not-active-pagination;
+
+    &:last-child {
+      border-bottom: 1px solid $border-not-active-pagination;
+    }
+  }
+
+  &__icon {
+    margin-right: 8px;
+  }
+
+  &__content {
+    margin-top: 30px;
+    padding: 20px 40px;
+
+    @include font(18px, $permanent-dark-blue-color, 400, 24px);
+
+    background-color: $promotion-top-bcg-color;
+  }
+}
+
+.accordion-header {
+  @include flex(flex, row, nowrap, center, flex-start);
+
+  &.open .icon-path {
+    transform: rotate(-90deg);
+  }
+}
+
+.icon-path {
+  margin-left: auto;
+
+  transform: rotate(90deg);
+}

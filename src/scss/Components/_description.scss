@@ -1,0 +1,35 @@
+.description {
+  &__text {
+    @include font(16px, $permanent-dark-blue-color, 400, 24px);
+  }
+}
+
+.description-feature {
+  &__title {
+    @include font(18px, $permanent-dark-blue-color, 500, 30px);
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 30px;
+
+    &::before {
+      position: absolute;
+      left: 10px;
+      top: 7px;
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: $permanent-blue-smoke-color-pagination;
+    }
+  }
+
+  &__text {
+    @include font(16px, $permanent-dark-blue-color, 400, 24px);
+  }
+}

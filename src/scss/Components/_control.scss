@@ -1,0 +1,231 @@
+.control {
+  width: 100%;
+  margin-bottom: 26px;
+
+  @media screen and (min-width: 768px) {
+    width: 589px;
+  }
+
+  &__rating {
+    @include flex(flex, row, wrap, center, flex-start);
+    width: 100%;
+    margin-bottom: 16px;
+
+    @media screen and (min-width: 768px) {
+      margin: 26px 0;
+    }
+
+    & .price__available {
+      margin-right: 6px;
+
+      @media screen and (min-width: 768px) {
+        margin-right: 22px;
+      }
+    }
+
+    & .goods__rating {
+      margin-bottom: 0;
+    }
+
+    & .goods__code {
+      margin-left: auto;
+
+      @media screen and (max-width: 767px) {
+        padding-top: 14px;
+      }
+    }
+  }
+
+  & .goods__code {
+    padding-top: 0;
+  }
+}
+
+.promotion {
+  width: 100%;
+
+  border-radius: 3px;
+  border: 1px solid $border-not-active-pagination;
+
+  &__link {
+    align-self: stretch;
+    padding: 16px 20px;
+
+    @include font(24px, $white-color, 500, 28.8px);
+
+    background-color: $action-bcg-color;
+    border-top-left-radius: 3px;
+
+    @media screen and (max-width: 767px) {
+      padding: 18px 14px;
+      @include font(10px, $white-color, 500, 12px);
+    }
+  }
+
+  &__text {
+    margin-left: 21px;
+
+    @include font(16px, $action-bcg-color, 400, 1.4);
+
+    border-top-right-radius: 3px;
+
+    @media screen and (max-width: 767px) {
+      padding: 8px 14px;
+      @include font(10px, $action-bcg-color, 500, 12px);
+    }
+  }
+
+  &__top {
+    @include flex(flex, row, nowrap, center, flex-start);
+    margin: -2px -2px 0 -2px;
+
+    background-color: $promotion-top-bcg-color;
+  }
+
+  &__body {
+    padding: 20px;
+
+    @media screen and (min-width: 768px) {
+      padding: 39px 21px 20px;
+    }
+
+    .price__value {
+      &--new {
+        margin-right: 24px;
+        @include font(24px, $action-bcg-color, 700, 28px);
+
+        @media screen and (min-width: 768px) {
+          @include font(36px, $action-bcg-color, 700, 43.2px);
+        }
+
+        .currency {
+          @include font(24px, $action-bcg-color, 300, 28px);
+
+          @media screen and (min-width: 768px) {
+            @include font(36px, $action-bcg-color, 300, 43.2px);
+          }
+        }
+      }
+
+      &--old {
+        position: relative;
+
+        margin-right: auto;
+        @include font(12px, $permanent-dark-blue-color, 500, 14px);
+
+        @media screen and (min-width: 768px) {
+          @include font(16px, $permanent-dark-blue-color, 500, 19.2px);
+          color: rgba(51, 72, 93, 0.5);
+        }
+
+        &::before {
+          position: absolute;
+          width: 100%;
+          height: 50%;
+          content: "";
+          border-bottom: 1px solid $action-bcg-color;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    @include flex(flex, row, nowrap, stretch, space-between);
+    margin: 0 -1px -1px -1px;
+
+    @media screen and (min-width: 768px) {
+      margin: 0 -2px -1px -2px;
+    }
+  }
+}
+
+.add {
+  @include flex(flex, row, nowrap, center, center);
+  width: 38.38%;
+
+  background-color: $card-border-color;
+  border-bottom-left-radius: 3px;
+
+  @media screen and (min-width: 768px) {
+    padding: 12px 18px 16px 20px;
+  }
+
+  &__button {
+    @include flex(flex, row, nowrap, center, center);
+    @include font(12px, $white-color, 500, 12px);
+
+    @media screen and (min-width: 768px) {
+      @include font(24px, $white-color, 500, 28.8px);
+    }
+  }
+
+  &__icon {
+    align-self: center;
+    margin-left: 10px;
+
+    @media screen and (min-width: 768px) {
+      margin-left: 32px;
+    }
+  }
+}
+
+.compare {
+  @include flex(flex, row, nowrap, center, center);
+  width: 15.29%;
+  padding: 3px;
+  margin-left: 14px;
+
+  border: 2px solid $wish-border-color;
+
+  &__button {
+    @include flex(flex, row, nowrap, stretch, center);
+  }
+
+  &__icon {
+    align-self: center;
+
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 11px 22px 10px;
+  }
+}
+
+.wish {
+  @include flex(flex, row, nowrap, center, center);
+  width: 15.29%;
+  padding: 3px;
+  border: 2px solid $wish-border-color;
+  border-left: 0;
+  margin-right: auto;
+
+  @media screen and (min-width: 768px) {
+    padding: 11px 23px 10px;
+  }
+}
+
+.buy {
+  width: 26.65%;
+  padding: 3px;
+
+  border: 2px solid $wish-border-color;
+
+  border-bottom-right-radius: 3px;
+
+  @media screen and (min-width: 768px) {
+    padding: 11px 20px 10px 20px;
+  }
+
+  &__button {
+    @include flex(flex, row, nowrap, center, center);
+    @include font(12px, $permanent-dark-blue-color, 500, 12px);
+
+    @media screen and (min-width: 768px) {
+      @include font(14px, $permanent-dark-blue-color, 500, 16.8px);
+    }
+  }
+
+  &__icon {
+    margin-right: 13px;
+  }
+}

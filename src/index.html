@@ -10,15 +10,456 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
   </head>
 
   <body>
     <main>
-      <section class="content">
-        <div class="products container">
-          <h1 class="products__title">Тестовые товары</h1>
-          <ul class="catalog swiper-slide">
-            <li class="catalog__cell goods">
+      <section class="product-description container">
+        <div class="tab-container container">
+          <ul class="tabs tabs__list">
+            <li class="tabs__item is-active" data-tab-name="tab-1">
+              <a class="tabs__link" href="#about-product">Всё о товаре</a>
+            </li>
+            <li class="tabs__item" data-tab-name="tab-2">
+              <a class="tabs__link" href="#description">Описание</a>
+            </li>
+            <li class="tabs__item" data-tab-name="tab-3">
+              <a class="tabs__link" href="#characteristics">Характеристики</a>
+            </li>
+            <li class="tabs__item" data-tab-name="tab-4">
+              <a class="tabs__link" href="#reviews">Отзывы <span>32</span></a>
+            </li>
+          </ul>
+
+          <div class="tab-content">
+            <div class="tab tab-1 is-active">
+              <div class="about-product">
+                <div class="about-product__left">
+                  <div class="left-content">
+                    <img
+                      srcset="
+                        ./images/spare_part46.jpg    294w,
+                        ./images/spare_part46@2x.jpg 588w
+                      "
+                      src="./images/spare_part46.jpg"
+                      alt="gray metal spare-part"
+                      width="280"
+                      height="280"
+                      class="about-product-photo__img"
+                    />
+                  </div>
+                  <div class="characteristics">
+                    <h2 class="characteristics__heading title">
+                      Характеристики
+                      <span class="characteristics__heading--green"
+                        >Картридж турбины Mercedes E-klasse</span
+                      >
+                    </h2>
+                    <table class="characteristics-full__list">
+                      <tr class="characteristics-full__item">
+                        <td class="characteristics-full__label">
+                          <span>Тип</span>
+                        </td>
+                        <td class="characteristics-full__value">Группа 1</td>
+                      </tr>
+                      <tr class="characteristics-full__item">
+                        <td class="characteristics-full__label">
+                          <span>Номер</span>
+                        </td>
+                        <td class="characteristics-full__value">B40-2-210</td>
+                      </tr>
+                      <tr class="characteristics-full__item">
+                        <td class="characteristics-full__label">
+                          <span>Бренд</span>
+                        </td>
+                        <td class="characteristics-full__value">TurboParts</td>
+                      </tr>
+                      <tr class="characteristics-full__item vissualy-hidden">
+                        <td class="characteristics-full__label">
+                          <span>Вес</span>
+                        </td>
+                        <td class="characteristics-full__value">0.35кг</td>
+                      </tr>
+                      <tr class="characteristics-full__item vissualy-hidden">
+                        <td class="characteristics-full__label">
+                          <span>Материал</span>
+                        </td>
+                        <td class="characteristics-full__value">
+                          Оцинкованная сталь
+                        </td>
+                      </tr>
+                      <tr class="characteristics-full__item vissualy-hidden">
+                        <td class="characteristics-full__label">
+                          <span
+                            >Страна-производитель <br />
+                            товара</span
+                          >
+                        </td>
+                        <td class="characteristics-full__value">Польша</td>
+                      </tr>
+                      <tr class="characteristics-full__item vissualy-hidden">
+                        <td class="characteristics-full__label">
+                          <span
+                            >Страна регистрации <br />
+                            бренда</span
+                          >
+                        </td>
+                        <td class="characteristics-full__value">Польша</td>
+                      </tr>
+                    </table>
+                    <button class="characteristics__button">
+                      <span> Все характеристики</span>
+                      <svg class="characteristics__icon" width="10" height="10">
+                        <use
+                          href="./images/symbol-defs.svg#icon-path-right"
+                        ></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="about-product__right">
+                  <div class="control">
+                    <div class="control__rating">
+                      <div class="price__available available">
+                        <svg class="available__icon" width="20" height="20">
+                          <use href="./images/symbol-defs.svg#icon-check"></use>
+                        </svg>
+                        <p class="available__item">В наличии</p>
+                      </div>
+                      <div class="goods__rating">
+                        <svg
+                          class="goods__icon icon-stars"
+                          width="111"
+                          height="17"
+                        >
+                          <use
+                            href="./images/symbol-defs.svg#icon-4-stars"
+                          ></use>
+                        </svg>
+                        <a class="goods__reviews" href="#">3</a>
+                      </div>
+                      <p class="goods__code detail-code">
+                        Артикул: <span class="goods__code--accent">100500</span>
+                      </p>
+                    </div>
+                    <div class="control__promotion promotion">
+                      <div class="promotion__top">
+                        <p class="promotion__link">Акция</p>
+                        <p class="promotion__text">
+                          До 30 марта скидка — 20% на все турбокомпрессоры
+                          <br />
+                          бренда TurboPartsf
+                        </p>
+                      </div>
+                      <div class="promotion__body">
+                        <div class="price">
+                          <p class="price__value price__value--new">
+                            3 799 <span class="currency">₴</span>
+                          </p>
+                          <p class="price__value price__value--old">
+                            4 200 <span class="currency">₴</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="promotion__bottom">
+                        <div class="goods__add add">
+                          <button class="add__button">
+                            В корзину
+                            <svg
+                              class="add__icon icon-add"
+                              width="30"
+                              height="30"
+                            >
+                              <use
+                                href="./images/symbol-defs.svg#icon-buy"
+                              ></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="goods__compare compare">
+                          <button class="compare__button">
+                            <svg
+                              class="compare__icon icon-balance"
+                              width="30"
+                              height="30"
+                            >
+                              <use
+                                href="./images/symbol-defs.svg#icon-balance"
+                              ></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="goods__wish wish">
+                          <button class="wish__button">
+                            <svg
+                              class="wish__icon icon-heart"
+                              width="30"
+                              height="30"
+                            >
+                              <use
+                                href="./images/symbol-defs.svg#icon-heart"
+                              ></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="goods__buy buy">
+                          <button class="buy__button">
+                            <svg
+                              class="buy__icon icon-buy"
+                              width="30"
+                              height="30"
+                            >
+                              <use
+                                href="./images/symbol-defs.svg#icon-phone"
+                              ></use>
+                            </svg>
+                            Купить в <br />
+                            1 клик
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion js-accordion">
+                    <ul class="accordion__list js-accordion-item">
+                      <li class="accordion__item">
+                        <div class="accordion-header js-accordion-header">
+                          <svg class="accordion__icon" width="30" height="30">
+                            <use
+                              href="./images/symbol-defs.svg#icon-guarantee"
+                            ></use>
+                          </svg>
+                          <h3 class="accordion__title">Гарантия</h3>
+                          <svg
+                            class="accordion__icon icon-path"
+                            width="12"
+                            height="12"
+                          >
+                            <use
+                              href="./images/symbol-defs.svg#icon-path-right"
+                            ></use>
+                          </svg>
+                        </div>
+                        <p
+                          class="accordion__content js-accordion-body vissualy-hidden"
+                        >
+                          Обмен/возврат товара в течение 14 дней
+                        </p>
+                      </li>
+                      <li class="accordion__item">
+                        <div class="accordion-header js-accordion-header">
+                          <svg class="accordion__icon" width="30" height="30">
+                            <use
+                              href="./images/symbol-defs.svg#icon-delivery"
+                            ></use>
+                          </svg>
+                          <h3 class="accordion__title">Условия доставки</h3>
+                          <svg
+                            class="accordion__icon icon-path"
+                            width="12"
+                            height="12"
+                          >
+                            <use
+                              href="./images/symbol-defs.svg#icon-path-right"
+                            ></use>
+                          </svg>
+                        </div>
+                        <p
+                          class="accordion__content js-accordion-body vissualy-hidden"
+                        >
+                          Самовывоз из наших магазинов
+                        </p>
+                      </li>
+                      <li class="accordion__item">
+                        <div class="accordion-header js-accordion-header">
+                          <svg class="accordion__icon" width="30" height="30">
+                            <use
+                              href="./images/symbol-defs.svg#icon-payment"
+                            ></use>
+                          </svg>
+                          <h3 class="accordion__title">Условия оплаты</h3>
+                          <svg
+                            class="accordion__icon icon-path"
+                            width="12"
+                            height="12"
+                          >
+                            <use
+                              href="./images/symbol-defs.svg#icon-path-right"
+                            ></use>
+                          </svg>
+                        </div>
+                        <p
+                          class="accordion__content js-accordion-body vissualy-hidden"
+                        >
+                          Наличная, Google Pay, Картой онлайн, Безналичными для
+                          юридических лиц, Безналичными для физических лиц,
+                          Apple Pay, PrivatPay, Кредит
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="reviews">
+                    <div class="reviews__header">
+                      <h3 class="reviews__heading title">
+                        Отзывы покупателей <span class="count">32</span>
+                      </h3>
+                      <button class="reviews-all reviews__button">
+                        <span>Все отзывы</span>
+                        <svg class="reviews__icon" width="9" height="6">
+                          <use
+                            href="./images/symbol-defs.svg#icon-path-right"
+                          ></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <ul class="reviews__list"></ul>
+                    <button class="reviews__show-more">Показать еще</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab tab-2">
+              <div class="description">
+                <p class="description__text">
+                  Саморезы типа «Флюгель» с крылышками модель WSDSK\WSDST
+                  торговой марки Wkret-Met Klimas широко используются для
+                  крепления деревянных элементов с стальному основанию Отличное
+                  качество! Произведено в Польше по самым высоким европейским
+                  стандартам!
+                </p>
+                <div class="description-feature">
+                  <h4 class="description-feature__title">
+                    Особенности самореза:
+                  </h4>
+                  <ul class="description-feature__list">
+                    <li class="description-feature__item">
+                      <p class="description-feature__text">
+                        Самосверлящий наконечник - сверлит отверстие в дереве и
+                        металле;
+                      </p>
+                    </li>
+                    <li class="description-feature__item">
+                      <p class="description-feature__text">
+                        Стальные крылышки - предназначены для расширения
+                        отверстия в деревянном элементе для избежания
+                        последующего повреждения при засверливании в стальное
+                        основание;
+                      </p>
+                    </li>
+                    <li class="description-feature__item">
+                      <p class="description-feature__text">
+                        WSDSK - Имеет шлиц РН-2;
+                      </p>
+                    </li>
+                    <li class="description-feature__item">
+                      <p class="description-feature__text">
+                        WSDST - Имеет шлиц ТХ-30 для лучшей передачи крутящего
+                        момента при монтаже;
+                      </p>
+                    </li>
+                    <li class="description-feature__item">
+                      <p class="description-feature__text">
+                        Гальваническое цинкование - толщина цинкового покрытия
+                        составляет 12 мкм, что гарантирует наивысший уровень
+                        защиты от коррозии.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="tab tab-3">
+              <div class="characteristics">
+                <h2 class="characteristics__heading">
+                  Характеристики
+                  <span class="characteristics__heading--green"
+                    >Картридж турбины <br />
+                    Mercedes E-klasse</span
+                  >
+                </h2>
+                <table class="characteristics-full__list">
+                  <tr class="characteristics-full__item">
+                    <td class="characteristics-full__label">
+                      <span>Тип</span>
+                    </td>
+                    <td class="characteristics-full__value">Группа 1</td>
+                  </tr>
+                  <tr class="characteristics-full__item">
+                    <td class="characteristics-full__label">
+                      <span>Номер</span>
+                    </td>
+                    <td class="characteristics-full__value">B40-2-210</td>
+                  </tr>
+                  <tr class="characteristics-full__item">
+                    <td class="characteristics-full__label">
+                      <span>Бренд</span>
+                    </td>
+                    <td class="characteristics-full__value">TurboParts</td>
+                  </tr>
+                  <tr class="characteristics-full__item">
+                    <td class="characteristics-full__label">
+                      <span>Вес</span>
+                    </td>
+                    <td class="characteristics-full__value">0.35кг</td>
+                  </tr>
+                  <tr class="characteristics-full__item">
+                    <td class="characteristics-full__label">
+                      <span>Материал</span>
+                    </td>
+                    <td class="characteristics-full__value">
+                      Оцинкованная сталь
+                    </td>
+                  </tr>
+                  <tr class="characteristics-full__item">
+                    <td class="characteristics-full__label">
+                      <span
+                        >Страна-производитель <br />
+                        товара</span
+                      >
+                    </td>
+                    <td class="characteristics-full__value">Польша</td>
+                  </tr>
+                  <tr class="characteristics-full__item">
+                    <td class="characteristics-full__label">
+                      <span
+                        >Страна регистрации <br />
+                        бренда</span
+                      >
+                    </td>
+                    <td class="characteristics-full__value">Польша</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="tab tab-4">
+              <div class="reviews">
+                <div class="reviews__header">
+                  <h3 class="reviews__heading">
+                    Отзывы покупателей <span class="count">32</span>
+                  </h3>
+                </div>
+                <ul class="reviews__list"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content products-content container">
+        <div class="products container products-swiper-container">
+          <h1 class="products__title title">Тестовые товары</h1>
+
+          <ul class="catalog slider swiper-wrapper">
+            <li class="catalog__cell goods swiper-slide">
               <a class="goods__picture link" href="#">
                 <img
                   srcset="
@@ -28,18 +469,19 @@
                   src="./images/spare_part43.jpg"
                   alt="gray metal spare-part"
                   width="255"
+                  height="255"
                   sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, (min-width: 480px) 100vw, 100vw"
                 />
               </a>
-              <span class="goods__label goods__label--blue">top</span>
-              <button class="goods__actions">
+              <span class="goods__label label-blue">top</span>
+              <button class="goods__button">
                 <svg class="actions__icon icon-heart" width="30" height="30">
                   <use href="./images/symbol-defs.svg#icon-heart"></use>
                 </svg>
               </button>
               <div class="goods__rating">
                 <svg class="goods__icon icon-stars" width="111" height="17">
-                  <use href="./images/symbol-defs.svg#icon-stars"></use>
+                  <use href="./images/symbol-defs.svg#icon-3-stars"></use>
                 </svg>
                 <a class="goods__reviews" href="#">3</a>
               </div>
@@ -60,13 +502,11 @@
                       <use href="./images/symbol-defs.svg#icon-check"></use>
                     </svg>
                     <p class="available__item">В наличии</p>
-                    <!-- <p class="available__item">Заканчивается</p>
-                      <p class="available__item">Нет в наличии</p> -->
                   </div>
                 </div>
               </div>
             </li>
-            <li class="catalog__cell goods">
+            <li class="catalog__cell goods swiper-slide">
               <a class="goods__picture link" href="#">
                 <img
                   srcset="
@@ -76,18 +516,19 @@
                   src="./images/spare_part43.jpg"
                   alt="diameter 4 part"
                   width="255"
+                  height="255"
                   sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, (min-width: 480px) 100vw, 100vw"
                 />
               </a>
-              <span class="goods__label goods__label--purple">new</span>
-              <button class="goods__actions">
+              <span class="goods__label label-purple">new</span>
+              <button class="goods__button">
                 <svg class="actions__icon icon-heart" width="30" height="30">
                   <use href="./images/symbol-defs.svg#icon-heart"></use>
                 </svg>
               </button>
               <div class="goods__rating">
                 <svg class="goods__icon icon-stars" width="111" height="17">
-                  <use href="./images/symbol-defs.svg#icon-stars"></use>
+                  <use href="./images/symbol-defs.svg#icon-4-stars"></use>
                 </svg>
                 <a class="goods__reviews" href="#">44</a>
               </div>
@@ -108,13 +549,11 @@
                       <use href="./images/symbol-defs.svg#icon-check"></use>
                     </svg>
                     <p class="available__item">В наличии</p>
-                    <!-- <p class="available__item">Заканчивается</p>
-                      <p class="available__item">Нет в наличии</p> -->
                   </div>
                 </div>
               </div>
             </li>
-            <li class="catalog__cell goods">
+            <li class="catalog__cell goods swiper-slide">
               <a class="goods__picture link" href="#">
                 <img
                   srcset="
@@ -124,18 +563,19 @@
                   src="./images/spare_part44.jpg"
                   alt="gray diameter 2 metal part"
                   width="255"
+                  height="255"
                   sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, (min-width: 480px) 100vw, 100vw"
                 />
               </a>
-              <span class="goods__label goods__label--blue">top</span>
-              <button class="goods__actions">
+              <span class="goods__label label-blue">top</span>
+              <button class="goods__button">
                 <svg class="actions__icon icon-heart" width="30" height="30">
                   <use href="./images/symbol-defs.svg#icon-heart"></use>
                 </svg>
               </button>
               <div class="goods__rating">
                 <svg class="goods__icon icon-stars" width="111" height="17">
-                  <use href="./images/symbol-defs.svg#icon-stars"></use>
+                  <use href="./images/symbol-defs.svg#icon-3-stars"></use>
                 </svg>
                 <a class="goods__reviews" href="#">11</a>
               </div>
@@ -156,13 +596,11 @@
                       <use href="./images/symbol-defs.svg#icon-check"></use>
                     </svg>
                     <p class="available__item">В наличии</p>
-                    <!-- <p class="available__item">Заканчивается</p>
-                      <p class="available__item">Нет в наличии</p> -->
                   </div>
                 </div>
               </div>
             </li>
-            <li class="catalog__cell goods">
+            <li class="catalog__cell goods swiper-slide">
               <a class="goods__picture link" href="#">
                 <img
                   srcset="
@@ -172,18 +610,19 @@
                   src="./images/spare_part43.jpg"
                   alt="gray 6 diameter metal part"
                   width="255"
+                  height="255"
                   sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, (min-width: 480px) 100vw, 100vw"
                 />
               </a>
-              <span class="goods__label goods__label--blue">top</span>
-              <button class="goods__actions">
+              <span class="goods__label label-blue">top</span>
+              <button class="goods__button">
                 <svg class="actions__icon icon-heart" width="30" height="30">
                   <use href="./images/symbol-defs.svg#icon-heart"></use>
                 </svg>
               </button>
               <div class="goods__rating">
                 <svg class="goods__icon icon-stars" width="111" height="17">
-                  <use href="./images/symbol-defs.svg#icon-stars"></use>
+                  <use href="./images/symbol-defs.svg#icon-4-stars"></use>
                 </svg>
                 <a class="goods__reviews" href="#">76</a>
               </div>
@@ -204,13 +643,11 @@
                       <use href="./images/symbol-defs.svg#icon-check"></use>
                     </svg>
                     <p class="available__item">В наличии</p>
-                    <!-- <p class="available__item">Заканчивается</p>
-                      <p class="available__item">Нет в наличии</p> -->
                   </div>
                 </div>
               </div>
             </li>
-            <li class="catalog__cell goods">
+            <li class="catalog__cell goods swiper-slide">
               <a class="goods__picture link" href="#">
                 <img
                   srcset="
@@ -220,18 +657,19 @@
                   src="./images/spare_part43.jpg"
                   alt="gray 8 diameter metal part"
                   width="255"
+                  height="255"
                   sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, (min-width: 480px) 100vw, 100vw"
                 />
               </a>
-              <span class="goods__label goods__label--purple">new</span>
-              <button class="goods__actions">
+              <span class="goods__label label-purple">new</span>
+              <button class="goods__button">
                 <svg class="actions__icon icon-heart" width="30" height="30">
                   <use href="./images/symbol-defs.svg#icon-heart"></use>
                 </svg>
               </button>
               <div class="goods__rating">
                 <svg class="goods__icon icon-stars" width="111" height="17">
-                  <use href="./images/symbol-defs.svg#icon-stars"></use>
+                  <use href="./images/symbol-defs.svg#icon-4-stars"></use>
                 </svg>
                 <a class="goods__reviews" href="#">2</a>
               </div>
@@ -252,57 +690,328 @@
                       <use href="./images/symbol-defs.svg#icon-check"></use>
                     </svg>
                     <p class="available__item">В наличии</p>
-                    <!-- <p class="available__item">Заканчивается</p>
-                      <p class="available__item">Нет в наличии</p> -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="catalog__cell goods swiper-slide">
+              <a class="goods__picture link" href="#">
+                <img
+                  srcset="
+                    ./images/spare_part43.jpg    294w,
+                    ./images/spare_part43@2x.jpg 588w
+                  "
+                  src="./images/spare_part43.jpg"
+                  alt="gray metal spare-part"
+                  width="255"
+                  height="255"
+                  sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, (min-width: 480px) 100vw, 100vw"
+                />
+              </a>
+              <span class="goods__label label-blue">top</span>
+              <button class="goods__button">
+                <svg class="actions__icon icon-heart" width="30" height="30">
+                  <use href="./images/symbol-defs.svg#icon-heart"></use>
+                </svg>
+              </button>
+              <div class="goods__rating">
+                <svg class="goods__icon icon-stars" width="111" height="17">
+                  <use href="./images/symbol-defs.svg#icon-3-stars"></use>
+                </svg>
+                <a class="goods__reviews" href="#">3</a>
+              </div>
+              <a class="goods__heading">
+                <p class="text">
+                  <span class="title">Group</span><br />
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                </p>
+              </a>
+
+              <div class="goods__price">
+                <div class="price">
+                  <p class="price__value">
+                    3 799 <span class="currency">₴</span>
+                  </p>
+                  <div class="price__available available">
+                    <svg class="available__icon" width="20" height="20">
+                      <use href="./images/symbol-defs.svg#icon-check"></use>
+                    </svg>
+                    <p class="available__item">В наличии</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="catalog__cell goods swiper-slide">
+              <a class="goods__picture link" href="#">
+                <img
+                  srcset="
+                    ./images/spare_part43.jpg    294w,
+                    ./images/spare_part43@2x.jpg 588w
+                  "
+                  src="./images/spare_part43.jpg"
+                  alt="diameter 4 part"
+                  width="255"
+                  height="255"
+                  sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, (min-width: 480px) 100vw, 100vw"
+                />
+              </a>
+              <span class="goods__label label-purple">new</span>
+              <button class="goods__button">
+                <svg class="actions__icon icon-heart" width="30" height="30">
+                  <use href="./images/symbol-defs.svg#icon-heart"></use>
+                </svg>
+              </button>
+              <div class="goods__rating">
+                <svg class="goods__icon icon-stars" width="111" height="17">
+                  <use href="./images/symbol-defs.svg#icon-4-stars"></use>
+                </svg>
+                <a class="goods__reviews" href="#">44</a>
+              </div>
+              <a class="goods__heading">
+                <p class="text">
+                  <span class="title">Group</span><br />
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                </p>
+              </a>
+
+              <div class="goods__price">
+                <div class="price">
+                  <p class="price__value">
+                    711 <span class="currency">₴</span>
+                  </p>
+                  <div class="price__available available">
+                    <svg class="available__icon" width="20" height="20">
+                      <use href="./images/symbol-defs.svg#icon-check"></use>
+                    </svg>
+                    <p class="available__item">В наличии</p>
                   </div>
                 </div>
               </div>
             </li>
           </ul>
-          <div class="pagination">
-            <ul class="slider-number">
-              <li class="slider-number__item">
-                <button class="slider-number__button">1</button>
-              </li>
-              <li class="slider-number__item">
-                <button
-                  class="slider-number__button slider-number__button--active"
-                >
-                  2
-                </button>
-              </li>
-              <li class="slider-number__item">
-                <button class="slider-number__button">3</button>
-              </li>
-              <li class="slider-number__item">
-                <button class="slider-number__button">4</button>
-              </li>
-              <li class="slider-number__item">
-                <button class="slider-number__button">5</button>
-              </li>
-            </ul>
-
-            <button class="slider-button button-next">
-              <svg
-                class="slider-button__icon--next"
-                width="28.14"
-                height="20.07"
-              >
-                <use href="./images/symbol-defs.svg#icon-path-left"></use>
-              </svg>
-            </button>
-            <button class="slider-button button-prev">
-              <svg
-                class="slider-button__icon--prev"
-                width="28.14"
-                height="20.07"
-              >
-                <use href="./images/symbol-defs.svg#icon-path-right"></use>
-              </svg>
-            </button>
-          </div>
+          <button class="slider-button button-next swiper-button-next">
+            <svg
+              class="slider-button__icon icon-next"
+              width="28.14"
+              height="20.07"
+            >
+              <use href="./images/symbol-defs.svg#icon-path-left"></use>
+            </svg>
+          </button>
+          <button class="slider-button button-prev swiper-button-prev">
+            <svg
+              class="slider-button__icon icon-prev"
+              width="28.14"
+              height="20.07"
+            >
+              <use href="./images/symbol-defs.svg#icon-path-right"></use>
+            </svg>
+          </button>
         </div>
       </section>
+      <section class="subscribe container">
+        <h2 class="subscribe__title title">
+          Нужна помощь в подборе товара? Мы перезваниваем!
+        </h2>
+        <form class="subscribe__form form">
+          <input
+            class="form__input"
+            type="email"
+            placeholder="+38 (0xx) xx - xx - xxx"
+          />
+          <button class="form__submit" type="submit">Отправить</button>
+        </form>
+      </section>
     </main>
+    <footer class="footer">
+      <div class="content container footer-top">
+        <div class="footer-column column-one">
+          <div class="column-one__top">
+            <a class="footer-column__logo" href="index.html">
+              <svg class="logo" width="114" height="41">
+                <use href="./images/symbol-defs.svg#icon-wezom"></use>
+              </svg>
+            </a>
+            <p class="column-one__title">
+              Удобный интернет — магазин <br />
+              автозапчастей
+            </p>
+          </div>
+          <ul class="social social__list">
+            <li class="social__item">
+              <a
+                class="social__link"
+                href="https://www.instagram.com/"
+                target="_blank"
+                aria-label="instagram"
+              >
+                <svg class="social__icon" width="22" height="22">
+                  <use
+                    href="./images/symbol-defs.svg#icon-instagram"
+                  ></use></svg
+              ></a>
+            </li>
+            <li class="social-__item">
+              <a
+                class="social__link"
+                href="https://www.facebook.com/"
+                target="_blank"
+                aria-label="facebook"
+              >
+                <svg class="social__icon" width="22" height="22">
+                  <use href="./images/symbol-defs.svg#icon-facebook"></use></svg
+              ></a>
+            </li>
+            <li class="social__item">
+              <a
+                class="social__link"
+                href="https://www.twitter.com/"
+                target="_blank"
+                aria-label="twitter"
+              >
+                <svg class="social__icon" width="22" height="22">
+                  <use href="./images/symbol-defs.svg#icon-twitter"></use></svg
+              ></a>
+            </li>
+            <li class="social__item">
+              <a
+                class="social__link"
+                href="https://www.youtube.com/"
+                target="_blank"
+                aria-label="youtube"
+              >
+                <svg class="social__icon" width="22" height="22">
+                  <use href="./images/symbol-defs.svg#icon-youtube"></use></svg
+              ></a>
+            </li>
+          </ul>
+          <div class="payment-delivery">
+            <a class="payment-delivery__link" href="" aria-label="new-post">
+              <svg class="payment-delivery__icon" width="83.72" height="30">
+                <use href="./images/symbol-defs.svg#icon-new-post"></use></svg
+            ></a>
+
+            <ul class="payment payment__list">
+              <li class="payment__item">
+                <a class="payment__link" href="" aria-label="visa">
+                  <img src="./images/visa.jpg" alt="" width="53" height="30"
+                /></a>
+              </li>
+              <li class="payment__item">
+                <a class="payment__link" href="" aria-label="mastercard">
+                  <img
+                    src="./images/mastercard.jpg"
+                    alt=""
+                    width="53"
+                    height="30"
+                /></a>
+              </li>
+              <li class="payment__item">
+                <a class="payment__link" href="" aria-label="maestro">
+                  <img src="./images/maestro.jpg" alt="" width="53" height="30"
+                /></a>
+              </li>
+              <li class="payment__item">
+                <a class="payment__link" href="" aria-label="paypal">
+                  <img src="./images/paypal.jpg" alt="" width="53" height="30"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-column column-two">
+          <h3 class="footer-column__title">Группа 1</h3>
+          <ul class="footer-column__list">
+            <li class="footer-column__item">
+              <a href="#" class="footer-column__link">Ноутбуки</a>
+            </li>
+            <li class="footer-column__item">
+              <a href="#" class="footer-column__link">Планшеты</a>
+            </li>
+            <li class="footer-column__item">
+              <a href="#" class="footer-column__link"
+                >Аксессуары для планшетов и электронных книг</a
+              >
+            </li>
+            <li class="footer-column__item">
+              <a href="#" class="footer-column__link">Кабели и переходники</a>
+            </li>
+            <li class="footer-column__item">
+              <a href="#" class="footer-column__link">Сумки для ноутбуков</a>
+            </li>
+            <li class="footer-column__item">
+              <a href="#" class="footer-column__link">Автотовары</a>
+            </li>
+            <li class="footer-column-links__item">
+              <a href="#" class="footer-column__link">Сантехника</a>
+            </li>
+            <li class="footer-column__item">
+              <a href="#" class="footer-column__link">Ремонт</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-column column-three">
+          <h3 class="footer-column__title">Группа 2</h3>
+          <ul class="footer-column__list">
+            <li class="footer-column__item">
+              <a href="#" class="footer-column__link"
+                >Политика конфиденциальности</a
+              >
+            </li>
+            <li class="footer-column__item">
+              <a href="#" class="footer-column__link">Доставка и оплата</a>
+            </li>
+            <li class="footer-column__item">
+              <a href="#" class="footer-column__link">Способы оплаты</a>
+            </li>
+            <li class="footer-column__item">
+              <a href="#" class="footer-column__link">Гарантия</a>
+            </li>
+            <li class="footer-column__item">
+              <a href="#" class="footer-column__link">Контакты</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column footer-contacts">
+          <h3 class="footer-column__title footer-contacts__title">
+            Горячая линия
+          </h3>
+          <ul class="footer-contacts__list">
+            <li class="footer-contacts__item">
+              <a href="tel:0800000000" class="main-contact-link"
+                >0 800 000 000</a
+              >
+            </li>
+            <li class="footer-contacts__item">
+              <a href="tel:+380680000000" class="footer-contacts__link"
+                >+38 068 000 00 00</a
+              >
+            </li>
+            <li class="footer-contacts__item">
+              <a href="tel:+380990000000" class="footer-contacts__link"
+                >+38 099 000 00 00</a
+              >
+            </li>
+            <li class="footer-contacts__item">
+              <a href="tel:+380960000000" class="footer-contacts__link"
+                >+38 096 000 00 00</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom container">
+        <p class="footer-bottom__copyright">2021 © Wezom Practice</p>
+        <p class="footer-bottom__website">
+          Разработка
+          <span class="footer-bottom__website--nunito">\\ Wezom</span>
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.easytabs/3.2.0/jquery.easytabs.min.js"></script>
   </body>
 </html>

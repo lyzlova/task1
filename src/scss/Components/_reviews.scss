@@ -1,0 +1,74 @@
+.reviews {
+  @include flex(flex, column, nowrap, stretch, flex-start);
+
+  &__header {
+    @include flex(flex, row, nowrap, stretch, flex-start);
+    margin-bottom: 38px;
+  }
+
+  .count {
+    font-family: "Nunito", sans-serif;
+    @include font(18px, $active-card-color, 500, 18px);
+
+    @media screen and (min-width: 768px) {
+      @include font(30px, $active-card-color, 500, 36px);
+    }
+  }
+
+  &__button {
+    @include flex(flex, row, nowrap, center, flex-start);
+    margin-left: auto;
+
+    span {
+      display: inline-block;
+      margin-right: 6px;
+      border-bottom: 1px solid rgba(92, 109, 125, 0.5);
+    }
+  }
+
+  &__list {
+    @extend %list;
+  }
+
+  &__item:not(:last-child) {
+    border-bottom: 1px solid $border-not-active-pagination;
+  }
+
+  &__show-more {
+    align-self: center;
+    padding: 12px 30px 11px 31px;
+    
+    @include font(13px, $permanent-dark-blue-color, 500, 15.6px);
+    border: 1px solid $star-color;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  &__icon {
+    margin-left: 4px;
+  }
+}
+
+.comment {
+  padding: 29px 0 34px;
+  @include flex(flex, column, nowrap, flex-start, flex-start);
+
+  &__header {
+    @include flex(flex, row, nowrap, center, flex-start);
+  }
+
+  &__author {
+    margin-right: 19px;
+    margin-bottom: 11px;
+    @include font(16px, $permanent-dark-blue-color, 400, 32px);
+  }
+
+  &__time {
+    font-family: "Nunito", sans-serif;
+    @include font(16px, $permanent-dark-blue-color, 400, 32px);
+  }
+
+  &__text {
+    @include font(16px, $permanent-dark-blue-color, 400, 24px);
+  }
+}

@@ -1,0 +1,66 @@
+.subscribe {
+  @include flex(flex, column, nowrap, center, center);
+  padding: 20px 20px 24px;
+  margin-bottom: 30px;
+  text-align: center;
+  background-color: $subscribe-bcg-color;
+  border-radius: 3px;
+
+  @media screen and (min-width: 768px) {
+    padding: 33px 102px 51px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    color: $white-color;
+  }
+
+  &__form {
+    @include flex(flex, row, nowrap, center, space-between);
+    width: 100%;
+    max-width: 400px;
+
+    background: $white-color;
+    border-radius: 3px;
+    border: 1px solid $white-color;
+
+    @media screen and (min-width: 768px) {
+      max-width: 586px;
+    }
+  }
+}
+
+.form {
+  &__input {
+    width: 100%;
+    padding-left: 6px;
+
+    &::placeholder {
+      @include font(16px, $permanent-dark-blue-color, 500, 19.2px);
+      opacity: 0.7;
+    }
+
+    @media screen and (min-width: 768px) {
+      padding-left: 19px;
+    }
+  }
+
+  &__submit {
+    padding: 13px 44px 14px 47px;
+
+    @include font(24px, $white-color, 500, 28.8px);
+
+    background-color: $star-color;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+
+    @media screen and (max-width: 767px) {
+      @include font(16px, $white-color, 500, 28.8px);
+      padding: 14px 16px;
+    }
+
+    &:hover {
+      color: darken($star-color, 20%);
+    }
+  }
+}

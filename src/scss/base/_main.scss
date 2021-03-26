@@ -1,49 +1,67 @@
-
 html {
-    box-sizing: border-box;
-  }
-  
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-  }
-  
-  body {
-    min-height: 100vh;
-    margin: 0;
-    font-family: "Roboto", sans-serif;
-  }
-  
-  h1,
-  h2,
-  h3,
-  h4,
-  ul,
-  ol,
-  p {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 0;
-  }
-  
-  img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-  }
+  box-sizing: border-box;
+}
 
-  .container {
-    margin: 0 auto;
-    max-width: 1522px;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
-  a {
-    cursor: pointer;
-    text-decoration: none;
-  }
-  
-  a:hover,
-  a:focus {
-    transform: scale(1.05);
-  }
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+ul,
+ol,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1522px;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  transform: scale(1.05);
+}
+
+button, input {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+main {
+  padding-top: 30px;
+  background: linear-gradient(180deg, #219653 0%, #FFFFFF 70%);
+}
+
+ul, ol {
+  @extend %list;
+}
+
+
+
+
