@@ -1,17 +1,17 @@
 .characteristics {
   @include flex(flex, column, nowrap, flex-start, flex-start);
-  min-width: 280px;
   width: 100%;
+  max-width: 510px;
+  padding-top: 38px;
+
+  @media screen and (min-width: 1024px) {
+    margin-left: 50px;
+  }
 
   &__heading {
-    @include flex(flex, row, nowrap, flex-start, flex-start);
     margin-bottom: 32px;
 
     &--green {
-      display: inline-block;
-      align-self: start;
-      margin-left: 8px;
-
       font-family: "Nunito", sans-serif;
       @include font(20px, $active-card-color, 400, 20px);
 
@@ -40,8 +40,9 @@
 
 .characteristics-full {
   &__list {
+    max-width: 326px;
     @include flex(flex, column, nowrap, flex-start, flex-start);
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     @extend %list;
   }
 

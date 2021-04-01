@@ -18,6 +18,11 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
   </head>
 
   <body>
@@ -44,23 +49,151 @@
               <div class="about-product">
                 <div class="about-product__left">
                   <div class="left-content">
-                    <img
-                      srcset="
-                        ./images/spare_part46.jpg    294w,
-                        ./images/spare_part46@2x.jpg 588w
-                      "
-                      src="./images/spare_part46.jpg"
-                      alt="gray metal spare-part"
-                      width="280"
-                      height="280"
-                      class="about-product-photo__img"
-                    />
+                    <div class="product-scrollbar">
+                      <ul class="photo-prev">
+                        <li class="photo-prev__item">
+                          <img
+                            srcset="
+                              ./images/spare_part46.jpg,
+                              ./images/spare_part46@2x.jpg
+                            "
+                            src="./images/spare_part46.jpg"
+                            alt="gray metal spare-part"
+                            class="photo-prev__img"
+                          />
+                        </li>
+                        <li class="photo-prev__item">
+                          <img
+                            srcset="
+                              ./images/spare_part45.jpg,
+                              ./images/spare_part45@2x.jpg
+                            "
+                            src="./images/spare_part45.jpg"
+                            alt="gray metal spare-part"
+                            class="photo-prev__img"
+                          />
+                        </li>
+                        <li class="photo-prev__item">
+                          <img
+                            srcset="
+                              ./images/spare_part47.jpg,
+                              ./images/spare_part47@2x.jpg
+                            "
+                            src="./images/spare_part47.jpg"
+                            alt="gray metal spare-part"
+                            class="photo-prev__img"
+                          />
+                        </li>
+                        <li class="photo-prev__item">
+                          <img
+                            srcset="
+                              ./images/spare_part48.jpg,
+                              ./images/spare_part48@2x.jpg
+                            "
+                            src="./images/spare_part48.jpg"
+                            alt="gray metal spare-part"
+                            class="photo-prev__img"
+                          />
+                        </li>
+                        <li class="photo-prev__item">
+                          <img
+                            srcset="
+                              ./images/spare_part46.jpg,
+                              ./images/spare_part46@2x.jpg
+                            "
+                            src="./images/spare_part46.jpg"
+                            alt="gray metal spare-part"
+                            class="photo-prev__img"
+                          />
+                        </li>
+                        <li class="photo-prev__item">
+                          <img
+                            srcset="
+                              ./images/spare_part45.jpg,
+                              ./images/spare_part45@2x.jpg
+                            "
+                            src="./images/spare_part45.jpg"
+                            alt="gray metal spare-part"
+                            class="photo-prev__img"
+                          />
+                        </li>
+                      </ul>
+                      <ul class="photo-big">
+                        <li class="photo-big__item">
+                          <img
+                            srcset="
+                              ./images/spare_part46.jpg,
+                              ./images/spare_part46@2x.jpg
+                            "
+                            src="./images/spare_part46.jpg"
+                            alt="gray metal spare-part"
+                            class="photo-big__img"
+                          />
+                        </li>
+                        <li class="photo-big__item">
+                          <img
+                            srcset="
+                              ./images/spare_part45.jpg,
+                              ./images/spare_part45@2x.jpg
+                            "
+                            src="./images/spare_part45.jpg"
+                            alt="gray metal spare-part"
+                            class="photo-big__img"
+                          />
+                        </li>
+                        <li class="photo-big__item">
+                          <img
+                            srcset="
+                              ./images/spare_part47.jpg,
+                              ./images/spare_part47@2x.jpg
+                            "
+                            src="./images/spare_part47.jpg"
+                            alt="gray metal spare-part"
+                            class="photo-big__img"
+                          />
+                        </li>
+                        <li class="photo-big__item">
+                          <img
+                            srcset="
+                              ./images/spare_part48.jpg,
+                              ./images/spare_part48@2x.jpg
+                            "
+                            src="./images/spare_part48.jpg"
+                            alt="gray metal spare-part"
+                            class="photo-big__img"
+                          />
+                        </li>
+                        <li class="photo-big__item">
+                          <img
+                            srcset="
+                              ./images/spare_part46.jpg,
+                              ./images/spare_part46@2x.jpg
+                            "
+                            src="./images/spare_part46.jpg"
+                            alt="gray metal spare-part"
+                            class="photo-big__img"
+                          />
+                        </li>
+                        <li class="photo-big__item">
+                          <img
+                            srcset="
+                              ./images/spare_part45.jpg,
+                              ./images/spare_part45@2x.jpg
+                            "
+                            src="./images/spare_part45.jpg"
+                            alt="gray metal spare-part"
+                            class="photo-big__img"
+                          />
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                   <div class="characteristics">
                     <h2 class="characteristics__heading title">
                       Характеристики
                       <span class="characteristics__heading--green"
-                        >Картридж турбины Mercedes E-klasse</span
+                        >Картридж турбины <br />
+                        Mercedes E-klasse</span
                       >
                     </h2>
                     <table class="characteristics-full__list">
@@ -314,7 +447,7 @@
                       </h3>
                       <button class="reviews-all reviews__button">
                         <span>Все отзывы</span>
-                        <svg class="reviews__icon" width="9" height="6">
+                        <svg class="reviews__icon" width="12" height="10">
                           <use
                             href="./images/symbol-defs.svg#icon-path-right"
                           ></use>
@@ -458,8 +591,8 @@
         <div class="products container products-swiper-container">
           <h1 class="products__title title">Тестовые товары</h1>
 
-          <ul class="catalog slider swiper-wrapper">
-            <li class="catalog__cell goods swiper-slide">
+          <ul class="catalog">
+            <li class="catalog__cell goods">
               <a class="goods__picture link" href="#">
                 <img
                   srcset="
@@ -506,7 +639,7 @@
                 </div>
               </div>
             </li>
-            <li class="catalog__cell goods swiper-slide">
+            <li class="catalog__cell goods">
               <a class="goods__picture link" href="#">
                 <img
                   srcset="
@@ -553,7 +686,7 @@
                 </div>
               </div>
             </li>
-            <li class="catalog__cell goods swiper-slide">
+            <li class="catalog__cell goods">
               <a class="goods__picture link" href="#">
                 <img
                   srcset="
@@ -600,7 +733,7 @@
                 </div>
               </div>
             </li>
-            <li class="catalog__cell goods swiper-slide">
+            <li class="catalog__cell goods">
               <a class="goods__picture link" href="#">
                 <img
                   srcset="
@@ -647,7 +780,7 @@
                 </div>
               </div>
             </li>
-            <li class="catalog__cell goods swiper-slide">
+            <li class="catalog__cell goods">
               <a class="goods__picture link" href="#">
                 <img
                   srcset="
@@ -694,7 +827,7 @@
                 </div>
               </div>
             </li>
-            <li class="catalog__cell goods swiper-slide">
+            <li class="catalog__cell goods">
               <a class="goods__picture link" href="#">
                 <img
                   srcset="
@@ -741,7 +874,7 @@
                 </div>
               </div>
             </li>
-            <li class="catalog__cell goods swiper-slide">
+            <li class="catalog__cell goods">
               <a class="goods__picture link" href="#">
                 <img
                   srcset="
@@ -789,43 +922,27 @@
               </div>
             </li>
           </ul>
-          <button class="slider-button button-next swiper-button-next">
-            <svg
-              class="slider-button__icon icon-next"
-              width="28.14"
-              height="20.07"
-            >
-              <use href="./images/symbol-defs.svg#icon-path-left"></use>
-            </svg>
-          </button>
-          <button class="slider-button button-prev swiper-button-prev">
-            <svg
-              class="slider-button__icon icon-prev"
-              width="28.14"
-              height="20.07"
-            >
-              <use href="./images/symbol-defs.svg#icon-path-right"></use>
-            </svg>
-          </button>
         </div>
       </section>
-      <section class="subscribe container">
-        <h2 class="subscribe__title title">
-          Нужна помощь в подборе товара? Мы перезваниваем!
-        </h2>
-        <form class="subscribe__form form">
-          <input
-            class="form__input"
-            type="email"
-            placeholder="+38 (0xx) xx - xx - xxx"
-          />
-          <button class="form__submit" type="submit">Отправить</button>
-        </form>
+      <section class="container subscribe">
+        <div class="subscribe__content">
+          <h2 class="subscribe__title title">
+            Нужна помощь в подборе товара? Мы перезваниваем!
+          </h2>
+          <form class="subscribe__form form">
+            <input
+              class="form__input"
+              type="email"
+              placeholder="+38 (0xx) xx - xx - xxx"
+            />
+            <button class="form__submit" type="submit">Отправить</button>
+          </form>
+        </div>
       </section>
     </main>
     <footer class="footer">
       <div class="content container footer-top">
-        <div class="footer-column column-one">
+        <div class="footer-column column-one footer-left">
           <div class="column-one__top">
             <a class="footer-column__logo" href="index.html">
               <svg class="logo" width="114" height="41">
@@ -919,86 +1036,87 @@
             </ul>
           </div>
         </div>
-        <div class="footer-column column-two">
-          <h3 class="footer-column__title">Группа 1</h3>
-          <ul class="footer-column__list">
-            <li class="footer-column__item">
-              <a href="#" class="footer-column__link">Ноутбуки</a>
-            </li>
-            <li class="footer-column__item">
-              <a href="#" class="footer-column__link">Планшеты</a>
-            </li>
-            <li class="footer-column__item">
-              <a href="#" class="footer-column__link"
-                >Аксессуары для планшетов и электронных книг</a
-              >
-            </li>
-            <li class="footer-column__item">
-              <a href="#" class="footer-column__link">Кабели и переходники</a>
-            </li>
-            <li class="footer-column__item">
-              <a href="#" class="footer-column__link">Сумки для ноутбуков</a>
-            </li>
-            <li class="footer-column__item">
-              <a href="#" class="footer-column__link">Автотовары</a>
-            </li>
-            <li class="footer-column-links__item">
-              <a href="#" class="footer-column__link">Сантехника</a>
-            </li>
-            <li class="footer-column__item">
-              <a href="#" class="footer-column__link">Ремонт</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="footer-column column-three">
-          <h3 class="footer-column__title">Группа 2</h3>
-          <ul class="footer-column__list">
-            <li class="footer-column__item">
-              <a href="#" class="footer-column__link"
-                >Политика конфиденциальности</a
-              >
-            </li>
-            <li class="footer-column__item">
-              <a href="#" class="footer-column__link">Доставка и оплата</a>
-            </li>
-            <li class="footer-column__item">
-              <a href="#" class="footer-column__link">Способы оплаты</a>
-            </li>
-            <li class="footer-column__item">
-              <a href="#" class="footer-column__link">Гарантия</a>
-            </li>
-            <li class="footer-column__item">
-              <a href="#" class="footer-column__link">Контакты</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-column footer-contacts">
-          <h3 class="footer-column__title footer-contacts__title">
-            Горячая линия
-          </h3>
-          <ul class="footer-contacts__list">
-            <li class="footer-contacts__item">
-              <a href="tel:0800000000" class="main-contact-link"
-                >0 800 000 000</a
-              >
-            </li>
-            <li class="footer-contacts__item">
-              <a href="tel:+380680000000" class="footer-contacts__link"
-                >+38 068 000 00 00</a
-              >
-            </li>
-            <li class="footer-contacts__item">
-              <a href="tel:+380990000000" class="footer-contacts__link"
-                >+38 099 000 00 00</a
-              >
-            </li>
-            <li class="footer-contacts__item">
-              <a href="tel:+380960000000" class="footer-contacts__link"
-                >+38 096 000 00 00</a
-              >
-            </li>
-          </ul>
+        <div class="footer-right">
+          <div class="footer-column column-two">
+            <h3 class="footer-column__title">Группа 1</h3>
+            <ul class="footer-column__list">
+              <li class="footer-column__item">
+                <a href="#" class="footer-column__link">Ноутбуки</a>
+              </li>
+              <li class="footer-column__item">
+                <a href="#" class="footer-column__link">Планшеты</a>
+              </li>
+              <li class="footer-column__item">
+                <a href="#" class="footer-column__link"
+                  >Аксессуары для планшетов и электронных книг</a
+                >
+              </li>
+              <li class="footer-column__item">
+                <a href="#" class="footer-column__link">Кабели и переходники</a>
+              </li>
+              <li class="footer-column__item">
+                <a href="#" class="footer-column__link">Сумки для ноутбуков</a>
+              </li>
+              <li class="footer-column__item">
+                <a href="#" class="footer-column__link">Автотовары</a>
+              </li>
+              <li class="footer-column-links__item">
+                <a href="#" class="footer-column__link">Сантехника</a>
+              </li>
+              <li class="footer-column__item">
+                <a href="#" class="footer-column__link">Ремонт</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column column-three">
+            <h3 class="footer-column__title">Группа 2</h3>
+            <ul class="footer-column__list">
+              <li class="footer-column__item">
+                <a href="#" class="footer-column__link"
+                  >Политика конфиденциальности</a
+                >
+              </li>
+              <li class="footer-column__item">
+                <a href="#" class="footer-column__link">Доставка и оплата</a>
+              </li>
+              <li class="footer-column__item">
+                <a href="#" class="footer-column__link">Способы оплаты</a>
+              </li>
+              <li class="footer-column__item">
+                <a href="#" class="footer-column__link">Гарантия</a>
+              </li>
+              <li class="footer-column__item">
+                <a href="#" class="footer-column__link">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column footer-contacts">
+            <h3 class="footer-column__title footer-contacts__title">
+              Горячая линия
+            </h3>
+            <ul class="footer-contacts__list">
+              <li class="footer-contacts__item">
+                <a href="tel:0800000000" class="main-contact-link"
+                  >0 800 000 000</a
+                >
+              </li>
+              <li class="footer-contacts__item">
+                <a href="tel:+380680000000" class="footer-contacts__link"
+                  >+38 068 000 00 00</a
+                >
+              </li>
+              <li class="footer-contacts__item">
+                <a href="tel:+380990000000" class="footer-contacts__link"
+                  >+38 099 000 00 00</a
+                >
+              </li>
+              <li class="footer-contacts__item">
+                <a href="tel:+380960000000" class="footer-contacts__link"
+                  >+38 096 000 00 00</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="footer-bottom container">
@@ -1010,7 +1128,6 @@
       </div>
     </footer>
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.easytabs/3.2.0/jquery.easytabs.min.js"></script>
   </body>

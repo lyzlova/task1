@@ -2,19 +2,12 @@
   border-bottom: 1px solid $border-not-active-pagination;
 
   &__list {
-    @include flex(flex, row, nowrap, center, flex-start);
+    max-width: 540px;
+    @include flex(flex, row, nowrap, center, space-around);
     @extend %list;
   }
 
   &__item {
-    &:not(:last-child) {
-      padding: 0 10px;
-
-      @media screen and (min-width: 768px) {
-        padding: 0 20px;
-      }
-    }
-
     &.is-active {
       margin-bottom: -1px;
       border-bottom: 1px solid $tabs-active-color;
@@ -47,7 +40,7 @@
 
 .tab-content {
   @include flex(flex, row, wrap, center, flex-start);
-  padding: 10px 0;
+  padding: 30px 0 0;
 }
 
 .tabs__item span {

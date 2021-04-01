@@ -1,9 +1,10 @@
 .reviews {
+  width: 92%;
   @include flex(flex, column, nowrap, stretch, flex-start);
 
   &__header {
     @include flex(flex, row, nowrap, stretch, flex-start);
-    margin-bottom: 38px;
+    margin-bottom: 10px;
   }
 
   .count {
@@ -40,7 +41,7 @@
     
     @include font(13px, $permanent-dark-blue-color, 500, 15.6px);
     border: 1px solid $star-color;
-    border-top-left-radius: 20px;
+    border-top-left-radius: 10px;
     border-bottom-right-radius: 20px;
   }
 
@@ -50,7 +51,7 @@
 }
 
 .comment {
-  padding: 29px 0 34px;
+  padding: 30px 0 34px;
   @include flex(flex, column, nowrap, flex-start, flex-start);
 
   &__header {
@@ -58,8 +59,8 @@
   }
 
   &__author {
-    margin-right: 19px;
-    margin-bottom: 11px;
+    margin-right: 20px;
+    margin-bottom: 14px;
     @include font(16px, $permanent-dark-blue-color, 400, 32px);
   }
 

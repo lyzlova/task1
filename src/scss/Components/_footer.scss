@@ -4,7 +4,7 @@
 
 .footer-top {
   @include flex(flex, column, wrap, flex-start, space-between);
-  padding: 33px 20px;
+  padding: 26px 41px;
 
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     flex-direction: row;
@@ -24,11 +24,11 @@
     }
   }
 
-  @media screen and (min-width: 768px) {
-    &:not(:first-child) {
-      width: 18%;
-    }
-  }
+  // @media screen and (min-width: 768px) {
+  //   &:not(:first-child) {
+  //     width: 18%;
+  //   }
+  // }
 
   &__logo {
     margin-right: 25px;
@@ -52,19 +52,39 @@
   align-self: center;
 
   &__top {
-    @include flex(flex, column, nowrap, center, space-between);
+    @include flex(flex, row, nowrap, center, space-between);
     align-self: center;
   }
 
   &__title {
+    display: none;
     font-family: "Nunito", sans-serif;
     @include font(16px, $white-color, 700, 20px);
+    @media screen and (min-width: 1920px) {
+      display: block;
+    }
+  }
+}
+
+.column-two {
+  @media screen and (min-width: 1024px) {
+    width: 30%;
+  }
+}
+
+.column-three {
+  @media screen and (min-width: 1024px) {
+    width: 52%;
   }
 }
 
 .footer-bottom {
   @include flex(flex, row, nowrap, center, space-between);
-  padding: 27px 20px 33px;
+  padding: 36px 20px 33px;
+
+  @media screen and (min-width: 1024px) {
+    padding: 36px 142px 33px 42px;
+  }
 
   @include font(14px, $white-color, 400, 18px);
   opacity: 0.5;
@@ -80,8 +100,7 @@
 .social {
   &__list {
     @include flex(flex, row, nowrap, center, space-between);
-    align-self: center;
-    margin: 35px 0;
+    margin: 40px 0;
     width: 163px;
     @extend %list;
   }
@@ -96,7 +115,7 @@
 
   &__link {
     @media screen and (min-width: 1200px) {
-      margin-right: 57.28px;
+      margin-right: 60px;
     }
   }
 }
@@ -110,6 +129,11 @@
 }
 
 .footer-contacts {
+  @media screen and (min-width: 1024px) {
+    width: 29%;
+    margin-left: auto;
+  }
+
   .main-contact-link {
     display: inline-block;
     margin-bottom: 12px;
@@ -128,5 +152,13 @@
   &__link {
     @include font(18px, $white-color, 500, 21px);
     opacity: 0.7;
+  }
+}
+
+.footer-right {
+  @media screen and (min-width: 1024px) {
+    @include flex(flex, row, nowrap, flex-start, space-between);
+    width: 58%;
+    padding: 32px 0 0;
   }
 }

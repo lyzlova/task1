@@ -17,7 +17,7 @@ function addReviews(obj) {
   const li = `
 <li class="reviews__item comment">
    <div class="comment__header">
-      <p class="comment__author">${obj.name} / <time class="comment__time">${obj.data}</time></p>
+      <p class="comment__author">${obj.name}  &#47;<time class="comment__time">${obj.data}</time></p>
       <div class="goods__rating">
           <svg class="goods__icon icon-stars" width="111" height="17">
               <use href="./images/symbol-defs.svg#icon-${obj.stars}-stars"></use>

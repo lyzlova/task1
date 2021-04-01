@@ -1,6 +1,4 @@
-@import "./Components/swiper";
 @import "./base/normalize";
-
 
 @import "./base/vissualy-hidden";
 @import "./base/main";
@@ -17,10 +15,12 @@
 @import "./Components/reviews.scss";
 @import "./Components/characteristics.scss";
 @import "./Components/description.scss";
+@import "./Components/product-scrollbar";
 
 @import "./Components/products.scss";
 @import "./Components/card.scss";
-@import "./Components/slider.scss";
 
 @import "./Components/subscribe.scss";
 @import "./Components/footer.scss";
+
+@import "./base/slick";

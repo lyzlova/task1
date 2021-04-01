@@ -1,6 +1,7 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = env => ({
   devtool: 'source-map',
@@ -38,6 +39,12 @@ module.exports = env => ({
     ],
   },
   plugins: [
+    new webpack.ProvidePlugin({
+      '$': 'jquery',
+      jquery: 'jquery',
+      jQuery: 'jquery',
+      'window.$': 'jquery',
+    }),
     new HtmlWebpackPlugin({
       template: './index.html',
       minify: {

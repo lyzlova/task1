@@ -1,13 +1,18 @@
 .subscribe {
-  @include flex(flex, column, nowrap, center, center);
-  padding: 20px 20px 24px;
+  @include flex(flex, column, nowrap, stretch, center);
+  padding: 20px 12px 0;
   margin-bottom: 30px;
   text-align: center;
-  background-color: $subscribe-bcg-color;
-  border-radius: 3px;
 
   @media screen and (min-width: 768px) {
-    padding: 33px 102px 51px;
+    padding: 20px 40px 0;
+  }
+
+  &__content {
+    @include flex(flex, column, nowrap, center, center);
+    padding: 32px 20px 54px;
+    background-color: $subscribe-bcg-color;
+    border-radius: 3px;
   }
 
   &__title {

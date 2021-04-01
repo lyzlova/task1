@@ -3,20 +3,10 @@
 }
 
 .products {
-  position: relative;
-  max-width: 1440px;
-
-  @include flex(flex, column, nowrap, center, center);
-  min-width: 0;
-
+  padding: 70px 41px 0;
   &__title {
     align-self: flex-start;
     margin-bottom: 30px;
   }
 }
 
-.catalog {
-  @include flex(flex, row, nowrap, stretch, center);
-  padding-bottom: 50px;
-  min-width: 0;
-}
