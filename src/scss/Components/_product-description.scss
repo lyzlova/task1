@@ -1,0 +1,9 @@
+.product-description {
+  padding: 0 10px 33px;
+  background-color: #fff;
+
+  @media screen and (min-width: 1024px) {
+    padding: 0 42px 33px;
+  }
+}
+

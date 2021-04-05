@@ -1,29 +1,25 @@
 .goods {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  padding: 14px 20px 38px 19px;
+  padding: 14px 20px 34px 12px;
 
   border: 2px solid $card-border-color;
   border-radius: 3px;
 
   @media screen and (min-width: 480px) {
-    margin-right: 15px;
+    margin-right: 8px;
+    margin-left: 8px;
   }
 
   &__picture {
     display: inline-block;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
   }
 
   &__label {
-    position: absolute;
     top: -2px;
     left: -2px;
 
     display: inline-block;
     padding: 5px 43px 5px 21px;
-    align-items: center;
 
     @include font(18px, $white-color, 500, 1);
 
@@ -40,7 +36,6 @@
   }
 
   &__button {
-    position: absolute;
     top: 0;
     right: 0;
 
@@ -56,19 +51,17 @@
   }
 
   &__rating {
-    @include flex(flex, row, wrap, center, flex-start);
-    margin-bottom: 9px;
+    margin-bottom: 2px;
   }
 
   &__reviews {
-    display: inline-block;
+    margin-top: 4px;
 
-    @include font(14px, $permanent-dark-blue-color, 500, 16.8px);
+    @include font(14px, $permanent-dark-blue-color, 500, 1.2);
   }
 
   &__heading {
-    display: inline-block;
-    margin-bottom: 26px;
+    margin-bottom: 30px;
 
     .text {
       @include font(18px, $permanent-dark-blue-color, 400, 24px);
@@ -79,22 +72,17 @@
     }
   }
 
-  &__code {
-    @include font(14px, $permanent-blue-smoke-color-pagination, 500, 16.8px);
-    &--accent {
-      @include font(14px, $permanent-blue-smoke-color-pagination, 600, 16.8px);
-      font-family: "Nunito", sans-serif;
-    }
+  .icon-stars {
+    width: 102px;
   }
 }
 
 .price {
-  @include flex(flex, row, nowrap, center, space-between);
   &__value {
-    @include font(16px, $permanent-dark-blue-color, 700, 28.8px);
+    @include font(16px, $permanent-dark-blue-color, 700, 1.2);
 
-    @media screen and (min-width: 1920px) {
-      @include font(24px, $permanent-dark-blue-color, 700, 28.8px);
+    @media screen and (min-width: 1400px) {
+      @include font(24px, $permanent-dark-blue-color, 700, 1.2);
     }
   }
 
@@ -104,12 +92,14 @@
 }
 
 .available {
-  @include flex(flex, row, wrap, center, space-between);
-
   &__item {
     margin-left: 9px;
 
-    @include font(16px, $active-card-color, 500, 19.2px);
+    @include font(16px, $active-card-color, 500, 1.2);
     text-align: right;
+  }
+
+  &__icon {
+    margin-right: 0;
   }
 }

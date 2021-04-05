@@ -1,124 +1,78 @@
 .control {
-  width: 100%;
-  margin-bottom: 26px;
-  padding-top: 6px;
-
-  @media screen and (min-width: 768px) {
-    max-width: 589px;
-  }
-
-  &__rating {
-    @include flex(flex, row, wrap, center, flex-start);
-    width: 100%;
-    margin-bottom: 30px;
-
-    & .price__available {
-      margin-right: 6px;
-
-      @media screen and (min-width: 768px) {
-        margin-right: 22px;
-      }
-    }
-
-    & .goods__rating {
-      margin-bottom: 0;
-    }
-
-    & .goods__code {
-      margin-left: auto;
-
-      @media screen and (max-width: 767px) {
-        padding-top: 14px;
-      }
-    }
-  }
-
-  & .goods__code {
-    padding-top: 0;
-  }
-}
-
-.promotion {
-  width: 100%;
-
-  border-radius: 3px;
+  border-radius: 10px;
   border: 1px solid $border-not-active-pagination;
 
-  &__link {
-    align-self: stretch;
-    padding: 16px 20px;
-
-    @include font(24px, $white-color, 500, 28.8px);
-
-    background-color: $action-bcg-color;
-    border-top-left-radius: 3px;
-
-    @media screen and (max-width: 767px) {
-      padding: 18px 14px;
-      @include font(10px, $white-color, 500, 12px);
-    }
-  }
-
-  &__text {
-    margin-left: 21px;
-
-    @include font(16px, $action-bcg-color, 400, 1.4);
-
-    border-top-right-radius: 3px;
-
-    @media screen and (max-width: 767px) {
-      padding: 8px 14px;
-      @include font(10px, $action-bcg-color, 500, 12px);
-    }
-  }
-
-  &__top {
-    @include flex(flex, row, nowrap, center, flex-start);
-    margin: -2px -2px 0 -2px;
-
+  .top {
     background-color: $promotion-top-bcg-color;
+    margin: -2px -1px 0 -1px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    &__link {
+      padding: 18px 14px;
+      @include font(10px, $white-color, 500, 1.2);
+
+      background-color: $action-bcg-color;
+      border-top-left-radius: 10px;
+
+      @media screen and (min-width: 1400px) {
+        padding: 16px 20px;
+        @include font(24px, $white-color, 500, 1.2);
+      }
+    }
+
+    &__text {
+      margin-left: 21px;
+
+      @include font(16px, $action-bcg-color, 400, 1.2);
+
+      border-top-right-radius: 10px;
+
+      @media screen and (max-width: 1400px) {
+        padding: 8px 14px;
+        @include font(10px, $action-bcg-color, 400, 1.2);
+      }
+    }
   }
 
-  &__body {
+  .price {
     padding: 20px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 992px) {
       padding: 39px 21px 20px;
     }
 
-    .price__value {
+    &__value {
       &--new {
         margin-right: 34px;
-        @include font(24px, $action-bcg-color, 700, 28px);
+        @include font(20px, $action-bcg-color, 700, 1.2);
 
-        @media screen and (min-width: 768px) {
-          @include font(36px, $action-bcg-color, 700, 43.2px);
+        @media screen and (min-width: 1400px) {
+          @include font(36px, $action-bcg-color, 700, 1.2);
         }
 
         .currency {
-          @include font(24px, $action-bcg-color, 300, 28px);
+          @include font(20px, $action-bcg-color, 300, 1.2);
 
-          @media screen and (min-width: 768px) {
-            @include font(36px, $action-bcg-color, 300, 43.2px);
+          @media screen and (min-width: 1400px) {
+            @include font(36px, $action-bcg-color, 300, 1.2);
           }
         }
       }
 
       &--old {
-        position: relative;
+        margin-top: 8px;
 
-        margin-right: auto;
-        @include font(12px, $permanent-dark-blue-color, 500, 14px);
+        @include font(12px, $price-old-color, 500, 1.2);
 
-        @media screen and (min-width: 768px) {
-          @include font(16px, $permanent-dark-blue-color, 500, 19.2px);
-          color: rgba(51, 72, 93, 0.5);
+        @media screen and (min-width: 1400px) {
+          @include font(16px, $price-old-color, 500, 1.2);
         }
 
         &::before {
           position: absolute;
-          left: -22%;
-          width: 143%;
+          left: -24%;
+          width: 142%;
           height: 56%;
           content: "";
           border-bottom: 1px solid $action-bcg-color;
@@ -126,103 +80,90 @@
       }
     }
   }
-
-  &__bottom {
-    @include flex(flex, row, nowrap, stretch, space-between);
-    margin: 0 -1px -1px -1px;
-
-    @media screen and (min-width: 768px) {
-      margin: 0 -2px -1px -2px;
-    }
-  }
 }
 
-.add {
-  @include flex(flex, row, nowrap, center, center);
-  width: 38.38%;
-
-  background-color: $card-border-color;
-  border-bottom-left-radius: 3px;
-
-  @media screen and (min-width: 768px) {
-    padding: 10px 5px 13px 7px;
-  }
-
-  &__button {
-    @include flex(flex, row, nowrap, center, center);
-    @include font(12px, $white-color, 500, 12px);
-
-    @media screen and (min-width: 768px) {
-      @include font(24px, $white-color, 500, 28.8px);
-    }
-  }
-
-  &__icon {
-    align-self: center;
-    margin-left: 10px;
-
-    @media screen and (min-width: 768px) {
-      margin-left: 40px;
-    }
-  }
-}
-
-.compare {
-  @include flex(flex, row, nowrap, center, center);
-  width: 15.29%;
-  padding: 3px;
-  margin-left: 9px;
-
-  border: 2px solid $wish-border-color;
-
-  &__button {
-    @include flex(flex, row, nowrap, stretch, center);
-  }
-
-  &__icon {
-    align-self: center;
-
-  }
-
-  @media screen and (min-width: 768px) {
-    padding: 7px 22px 10px;
-  }
-}
-
-.wish {
-  @include flex(flex, row, nowrap, center, center);
-  width: 15.29%;
+.smoke-yellow-button {
   padding: 3px;
   border: 2px solid $wish-border-color;
-  border-left: 0;
-  margin-right: auto;
-
-  @media screen and (min-width: 768px) {
-    padding: 11px 23px 10px;
-  }
 }
 
-.buy {
-  width: 28.62%;
-  padding: 3px;
+.actions {
+  margin: 0 -1px -1px -1px;
 
-  border: 2px solid $wish-border-color;
-  border-bottom-right-radius: 3px;
+  &__add {
+    width: 38.2%;
+    background-color: $active-card-color;
+    border-bottom-left-radius: 10px;
 
-  @media screen and (min-width: 768px) {
-    padding: 8px 36px 12px 15px;
-  }
+    @media screen and (min-width: 992px) {
+      padding: 13px 5px 15px 7px;
+    }
 
-  &__button {
-    @include flex(flex, row, nowrap, center, center);
-    @include font(12px, $permanent-dark-blue-color, 500, 12px);
+    .add {
+      &__button {
+        @include font(12px, $white-color, 500, 1.2);
 
-    @media screen and (min-width: 768px) {
-      @include font(14px, $permanent-dark-blue-color, 500, 16.8px);
+        @media screen and (min-width: 1400px) {
+          @include font(24px, $white-color, 500, 1.2);
+        }
+      }
+
+      &__icon {
+        margin-left: 10px;
+
+        @media screen and (min-width: 768px) {
+          margin-left: 40px;
+        }
+      }
     }
   }
 
-  &__icon {
-    margin-right: 13px;
+  &__compare {
+    width: 15.29%;
+    margin-left: 9px;
+
+    @media screen and (min-width: 992px) {
+      padding: 7px 22px 10px;
+    }
+  }
+
+  &__wish {
+    width: 15.29%;
+
+    @media screen and (min-width: 992px) {
+      padding: 11px 23px 10px;
+    }
+  }
+
+  &__buy {
+    width: 28.62%;
+
+    border-bottom-right-radius: 10px;
+
+    @media screen and (min-width: 992px) {
+      padding: 8px 34px 12px 18px;
+    }
+
+    .buy {
+      &__button {
+        @include font(10px, $permanent-blue-smoke-color-pagination, 500, 1.2);
+
+        text-align: left;
+        @media screen and (min-width: 1400px) {
+          @include font(14px, $permanent-blue-smoke-color-pagination, 500, 1.3);
+        }
+      }
+
+      &__icon {
+        margin-right: 13px;
+      }
+    }
+  }
+
+  svg {
+    @media screen and (max-width: 1439px) {
+      height: 20px;
+      width: 20px;
+    }
   }
 }

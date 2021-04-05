@@ -1,10 +1,9 @@
 
-  $(".js-accordion-header").click(function () {
+  $("[data-accordion]").click(function () {
     $(this).toggleClass("open");
-    $(this).next(".js-accordion-body").toggleClass("vissualy-hidden");
+    $(this).find("[data-accordion-content]").toggleClass("vissualy-hidden");
     if ($(this).hasClass("open")) {
-      $(".js-accordion-header").not(this).removeClass("open");
-      $(this).next(".js-accordion-body").removeClass("vissualy-hidden");
+      $(this).find("[data-accordion-content]").removeClass("vissualy-hidden");
     }
   });
 

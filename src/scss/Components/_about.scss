@@ -1,0 +1,74 @@
+.right-content {
+  &__heading {
+    padding-top: 40px;
+    margin-bottom: 26px;
+  }
+
+  &__top {
+    margin-bottom: 28px;
+  }
+}
+
+.top {
+  &__available {
+    margin-right: 6px;
+
+    @media screen and (min-width: 992px) {
+      margin-right: 22px;
+    }
+  }
+}
+
+.available {
+  &__icon {
+    margin-right: 13px;
+  }
+
+  &__item {
+    @include font(11px, $available-color, 500, 1.2);
+
+    @media screen and (min-width: 992px) {
+      @include font(16px, $available-color, 500, 1.2);
+    }
+  }
+}
+
+.top-reviews {
+  &__amount {
+    position: relative;
+    margin-left: -7px;
+
+    font-family: "Nunito", sans-serif;
+    @include font(12px, $permanent-dark-blue-color, 600, 1.2);
+
+    @media screen and (min-width: 992px) {
+      @include font(14px, $permanent-dark-blue-color, 600, 1.2);
+    }
+
+    &:before {
+      position: absolute;
+      width: 100%;
+      bottom: -1px;
+      content: "";
+      border-bottom: 1px solid $permanent-blue-smoke-color-pagination;
+    }
+  }
+}
+
+.article {
+  @include font(11px, $permanent-blue-smoke-color-pagination, 500, 1.2);
+
+  @media screen and (min-width: 992px) {
+    @include font(14px, $permanent-blue-smoke-color-pagination, 500, 1.2);
+  }
+
+  &--accent {
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+  }
+}
+
+.icon-stars {
+  width: 110px;
+  height: 17px;
+}

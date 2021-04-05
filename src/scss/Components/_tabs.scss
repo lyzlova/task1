@@ -1,13 +1,21 @@
-.tabs {
+.nav {
   border-bottom: 1px solid $border-not-active-pagination;
 
-  &__list {
-    max-width: 540px;
-    @include flex(flex, row, nowrap, center, space-around);
-    @extend %list;
+  &__link {
+    display: block;
+    padding: 8px 4px 13px;
+    
+    @include font(12px, $permanent-blue-smoke-color-pagination, 500, 1);
+
+    @media screen and (min-width: 576px) {
+      padding: 11px 21px 13px 19px;
+      @include font(16px, $permanent-blue-smoke-color-pagination, 500, 1.2);
+    }
   }
 
   &__item {
+    border: none;
+    background-color: transparent;
     &.is-active {
       margin-bottom: -1px;
       border-bottom: 1px solid $tabs-active-color;
@@ -18,31 +26,25 @@
     }
   }
 
-  &__link {
-    display: block;
-    padding: 8px 0 13px;
-    @include font(12px, $permanent-dark-blue-color, 500, 14px);
+  &:hover {
+    transform: none;
+  }
 
-    @media screen and (min-width: 768px) {
-      padding: 10px 0 15px;
-      @include font(16px, $permanent-dark-blue-color, 500, 19.2px);
+  .reviews {
+    @include font(12px, $tabs-active-color, 700, 1.2);
+
+    @media screen and (min-width: 576px) {
+      @include font(16px, $tabs-active-color, 700, 1.2);
     }
   }
 }
 
-.tab {
-  display: none;
-}
-
-.tab.is-active {
-  display: flex;
-}
-
 .tab-content {
-  @include flex(flex, row, wrap, center, flex-start);
-  padding: 30px 0 0;
-}
+  .tab {
+    display: none;
+  }
 
-.tabs__item span {
-  color: $slider-border-color;
+  .tab.is-active {
+    display: flex;
+  }
 }

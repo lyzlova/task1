@@ -1,4 +1,5 @@
 @import "./base/normalize";
+@import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 @import "./base/vissualy-hidden";
 @import "./base/main";
@@ -6,20 +7,19 @@
 @import "./utils/placeholder";
 @import "./utils/variables";
 @import "./utils/mixins";
-@import "./utils/text";
 
-@import "./Components/about-product.scss";
+@import "./Components/text";
+@import "./Components/button.scss";
+@import "./Components/product-description.scss";
 @import "./Components/tabs.scss";
+@import "./Components/about.scss";
 @import "./Components/control.scss";
 @import "./Components/accordion.scss";
-@import "./Components/reviews.scss";
 @import "./Components/characteristics.scss";
+@import "./Components/reviews.scss";
 @import "./Components/description.scss";
-@import "./Components/product-scrollbar";
-
 @import "./Components/products.scss";
 @import "./Components/card.scss";
-
 @import "./Components/subscribe.scss";
 @import "./Components/footer.scss";
 

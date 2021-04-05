@@ -1,14 +1,7 @@
 .accordion {
-  width: 100%;
-  max-width: 589px;
-  margin-bottom: 93px;
-
-  &__list {
-    @extend %list;
-  }
-
   &__item {
-    padding: 27px 0px 31px 12px;
+    padding: 30px 0px 29px 12px;
+    cursor: pointer;
 
     border-top: 1px solid $border-not-active-pagination;
 
@@ -23,26 +16,34 @@
     width: 20px;
   }
 
+  &__title {
+    font-family: "Nunito", sans-serif;
+    @include font(12px, $permanent-blue-smoke-color-pagination, 700, 1.2);
+
+    @media screen and (min-width: 992px) {
+      @include font(16px, $permanent-blue-smoke-color-pagination, 700, 1.2);
+    }
+  }
+
   &__content {
     margin-top: 30px;
     padding: 20px 40px;
 
-    @include font(18px, $permanent-dark-blue-color, 400, 24px);
+    font-family: "Nunito", sans-serif;
+    @include font(16px, $permanent-blue-smoke-color-pagination, 700, 1.2);
 
     background-color: $promotion-top-bcg-color;
   }
 }
 
-.accordion-header {
-  @include flex(flex, row, nowrap, center, flex-start);
-
+.accordion__item {
   &.open .icon-path {
     transform: rotate(-90deg);
   }
 }
 
 .icon-path {
-  margin-left: auto;
-
+  height: 13px;
+  width: 5px;
   transform: rotate(90deg);
 }

@@ -1,0 +1,12 @@
+
+{{#each this}}
+    <li class="reviews__item comment">
+        <div class="comment__header d-flex flex-row justify-content-start">
+            <p class="comment__author">{{name}}  &#47; <time class="comment__time">{{data}}</time></p>
+                <svg class="comment__icon icon-stars" width="111" height="17">
+              <use href="./images/symbol-defs.svg#icon-{{stars}}-stars"></use>
+            </svg>
+        </div>
+        <p class="comment__text">{{text}}</p>
+    </li>
+{{/each}}

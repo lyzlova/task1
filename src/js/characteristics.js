@@ -1,7 +1,9 @@
-const aboutProductLeft = document.querySelector(".about-product__left");
-const showMoreButton = aboutProductLeft.querySelector(".characteristics__button");
+const tabContentBottom = document.querySelector(".tab-content__bottom");
 const characteristicsLabelList = Array.from(
-  aboutProductLeft.querySelectorAll(".characteristics-full__item")
+  tabContentBottom.querySelectorAll(".characteristics-full__item")
+);
+const buttonsGroup = document.querySelector(
+  "[ data-characteristics-button-path]"
 );
 
 const hiddenCharacteristics = characteristicsLabelList.slice(
@@ -9,25 +11,23 @@ const hiddenCharacteristics = characteristicsLabelList.slice(
   characteristicsLabelList.length
 );
 
-showMoreButton.addEventListener("click", addNewCharacteristics);
 
-function addNewCharacteristics(e) {
-  if (e.target.nodeName === "SPAN") {
-    characteristicsLabelList.forEach((item) => {
-      if (item.classList.contains("vissualy-hidden")) {
-        item.classList.remove("vissualy-hidden");
-      }
-    });
+buttonsGroup.addEventListener("click", hadleToggle);
 
-    this.classList.toggle("open");
-  }
+function hadleToggle(e) {
+  buttonsGroup.classList.toggle("is-open");
 
-  if (this.classList.contains("open")) {
-    e.target.textContent = "Скрыть";
-  } else {
-    e.target.textContent = "Все характеристики";
+  characteristicsLabelList.forEach((item) => {
+    if (item.classList.contains("vissualy-hidden")) {
+      item.classList.remove("vissualy-hidden");
+    }
+  });
+
+  if (!this.classList.contains("is-open")) {
     hiddenCharacteristics.forEach((item) => {
       item.classList.add("vissualy-hidden");
     });
+
   }
 }
+

@@ -1,75 +1,59 @@
 .reviews {
-  width: 92%;
-  @include flex(flex, column, nowrap, stretch, flex-start);
+  padding-top: 22px;
 
   &__header {
-    @include flex(flex, row, nowrap, stretch, flex-start);
     margin-bottom: 10px;
   }
 
-  .count {
-    font-family: "Nunito", sans-serif;
-    @include font(18px, $active-card-color, 500, 18px);
+  &__heading {
+    @include font(16px, $permanent-dark-blue-color, 400, 1.2);
 
-    @media screen and (min-width: 768px) {
-      @include font(30px, $active-card-color, 500, 36px);
+    @media screen and (min-width: 1400px) {
+      @include font(30px, $permanent-dark-blue-color, 400, 1.2);
     }
-  }
-
-  &__button {
-    @include flex(flex, row, nowrap, center, flex-start);
-    margin-left: auto;
-
-    span {
-      display: inline-block;
-      margin-right: 6px;
-      border-bottom: 1px solid rgba(92, 109, 125, 0.5);
-    }
-  }
-
-  &__list {
-    @extend %list;
   }
 
   &__item:not(:last-child) {
     border-bottom: 1px solid $border-not-active-pagination;
   }
 
-  &__show-more {
-    align-self: center;
-    padding: 12px 30px 11px 31px;
-    
-    @include font(13px, $permanent-dark-blue-color, 500, 15.6px);
-    border: 1px solid $star-color;
-    border-top-left-radius: 10px;
-    border-bottom-right-radius: 20px;
+  .count {
+    margin: 2px 0 0 10px;
+    @include font(16px, $active-card-color, 500, 1.2);
+
+    @media screen and (min-width: 768px) {
+      @include font(30px, $active-card-color, 500, 1.2);
+    }
   }
 
-  &__icon {
-    margin-left: 4px;
+  .main-button:disabled {
+    opacity: 0.5;
+  }
+
+  .reviews-buttons-group:disabled {
+    opacity: 0.5;
   }
 }
 
 .comment {
-  padding: 30px 0 34px;
-  @include flex(flex, column, nowrap, flex-start, flex-start);
+  padding: 36px 0 36px 3px;
 
   &__header {
-    @include flex(flex, row, nowrap, center, flex-start);
+    margin-bottom: 18px;
   }
 
   &__author {
     margin-right: 20px;
-    margin-bottom: 14px;
-    @include font(16px, $permanent-dark-blue-color, 400, 32px);
+    @include font(16px, $permanent-dark-blue-color, 500, 1.2);
   }
 
   &__time {
+    margin-left: 4px;
     font-family: "Nunito", sans-serif;
-    @include font(16px, $permanent-dark-blue-color, 400, 32px);
+    @include font(14px, $permanent-dark-blue-color, 400, 1.2);
   }
 
   &__text {
-    @include font(16px, $permanent-dark-blue-color, 400, 24px);
+    @include font(16px, $permanent-blue-smoke-color-pagination, 400, 1.5);
   }
 }

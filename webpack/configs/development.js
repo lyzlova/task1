@@ -1,6 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const paths = require("../utils/paths");
-const webpack = require('webpack');
+const webpack = require("webpack");
 
 module.exports = (env) => ({
   devtool: "cheap-eval-source-map",
@@ -17,14 +17,15 @@ module.exports = (env) => ({
         test: /\.scss$/,
         use: ["style-loader", "css-loader", "postcss-loader", "sass-loader"],
       },
+      { test: /\.handlebars$/, loader: "handlebars-loader" },
     ],
   },
   plugins: [
     new webpack.ProvidePlugin({
-      '$': 'jquery',
-      jquery: 'jquery',
-      jQuery: 'jquery',
-      'window.$': 'jquery',
+      $: "jquery",
+      jquery: "jquery",
+      jQuery: "jquery",
+      "window.$": "jquery",
     }),
     new HtmlWebpackPlugin({
       template: "./index.html",

@@ -1,35 +1,38 @@
 .characteristics {
-  @include flex(flex, column, nowrap, flex-start, flex-start);
-  width: 100%;
-  max-width: 510px;
-  padding-top: 38px;
+  padding-top: 20px;
+  margin-right: 10px;
+  padding-bottom: 40px;
 
   @media screen and (min-width: 1024px) {
-    margin-left: 50px;
+    padding-left: 122px;
   }
 
   &__heading {
-    margin-bottom: 32px;
+    margin-bottom: 30px;
 
     &--green {
       font-family: "Nunito", sans-serif;
-      @include font(20px, $active-card-color, 400, 20px);
+      @include font(20px, $active-card-color, 400, 1.2);
 
-      @media screen and (min-width: 768px) {
-        @include font(30px, $active-card-color, 500, 36px);
+      @media screen and (min-width: 1400px) {
+        @include font(30px, $active-card-color, 400, 1.2);
       }
     }
   }
 
-  &__button {
-    @include flex(flex, row, nowrap, center, flex-start);
+  .buttons-group-path {
+    &__button {
+      &--close {
+        display: none;
+      }
+    }
 
-    @include font(16px, $permanent-dark-blue-color, 500, 24px);
+    &.is-open > .buttons-group-path__button--open {
+      display: none;
+    }
 
-    span {
-      display: inline-block;
-      border-bottom: 1px solid rgba(92, 109, 125, 0.5);
-      margin-right: 6px;
+    &.is-open > .buttons-group-path__button--close {
+      display: flex;
     }
   }
 
@@ -40,40 +43,42 @@
 
 .characteristics-full {
   &__list {
-    max-width: 326px;
-    @include flex(flex, column, nowrap, flex-start, flex-start);
-    margin-bottom: 20px;
-    @extend %list;
+    margin-bottom: 26px;
   }
 
-  tr {
-    border-bottom: 1px solid $border-not-active-pagination;
+  tbody {
+    max-width: 356px;
+  }
+
+  &__item {
+    margin-bottom: -2px;
   }
 
   &__label {
-    position: relative;
-    width: 516px;
-    @include font(16px, $permanent-dark-blue-color, 500, 30px);
+    width: 226px;
 
     &::before {
       position: absolute;
       width: 100%;
       bottom: 10px;
       content: "";
-      border-bottom: 1px dotted $border-not-active-pagination;
+      border-bottom: 1px dashed $border-not-active-pagination;
     }
 
     span {
       position: relative;
-      display: inline-block;
       padding-right: 16px;
       background-color: $white-color;
+      @include font(16px, $permanent-dark-blue-color, 500, 1.875);
     }
   }
 
   &__value {
     padding-left: 16px;
-    
-    @include font(16px, $permanent-dark-blue-color, 400, 30px);
+    @include font(12px, $permanent-blue-smoke-color-pagination, 400, 1.875);
+
+    @media screen and (min-width: 1400px) {
+      @include font(16px, $permanent-blue-smoke-color-pagination, 400, 1.875);
+    }
   }
 }

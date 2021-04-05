@@ -1,91 +1,61 @@
-import data from "../js/reviews-data";
+import data from "../js/reviews-data.json";
+import template from "../template/reviews.hbs";
 
-//  ======= отзывы main content
+const tabContentBottom = document.querySelector(".tab-content__bottom");
+const reviewsList = tabContentBottom.querySelector(".reviews__list");
+const showMoreButton = tabContentBottom.querySelector(".main-button");
+const showAllReviewsButton = document.querySelector(
+  "[data-reviews-button-path]"
+);
 
-const aboutProductRight = document.querySelector(".about-product__right");
-const amountReviewsAll = aboutProductRight.querySelectorAll(".count");
-Array.from(amountReviewsAll).map((obj) => (obj.textContent = data.length));
-
-// подгрузка отзывов только первых двух
-let countReviewsMain = 2;
+// // подгрузка новых отзывов +2 при клике на reviews__button
 let indexReviewsMain = 0;
+let countReviewsMain = 2;
 
-const reviewsList = aboutProductRight.querySelectorAll(".reviews__list");
-const showMoreButton = aboutProductRight.querySelector(".reviews__show-more");
+const createReviews = (index, count) => {
+  const getReviews = data.slice(index, count);
+  const reviewsMarkup = template(getReviews);
 
-function addReviews(obj) {
-  const li = `
-<li class="reviews__item comment">
-   <div class="comment__header">
-      <p class="comment__author">${obj.name}  &#47;<time class="comment__time">${obj.data}</time></p>
-      <div class="goods__rating">
-          <svg class="goods__icon icon-stars" width="111" height="17">
-              <use href="./images/symbol-defs.svg#icon-${obj.stars}-stars"></use>
-          </svg>
-      </div>
-   </div>
-   <p class="comment__text">${obj.text}</p>
-</li>
-`;
-  return li;
-}
+  reviewsList.insertAdjacentHTML("beforeend", reviewsMarkup);
+};
+createReviews(indexReviewsMain, countReviewsMain);
 
-function createReviews(index, count, elem) {
-  const markup = createReviewsList(data);
+const handleMoreReviews = (e) => {
+  indexReviewsMain += 2;
+  countReviewsMain += 2;
+  const getReviews = data.slice(indexReviewsMain, countReviewsMain);
+  const reviewsMarkup = template(getReviews);
 
-  function createReviewsList(data) {
-    return data
-      .slice(index, count)
-      .map((obj) => addReviews(obj))
-      .join("");
+  reviewsList.insertAdjacentHTML("beforeend", reviewsMarkup);
+
+  if (countReviewsMain >= data.length) {
+    showMoreButton.disabled = true;
+    showAllReviewsButton.disabled = true;
   }
-  Array.from(elem).map((obj) => obj.insertAdjacentHTML("beforeend", markup));
-}
-
-createReviews(indexReviewsMain, countReviewsMain, reviewsList);
-
-// подгрузка новых отзывов +2 при клике на reviews__button
-
-function handleMoreReviews(e) {
-  if (e.target.nodeName === "BUTTON") {
-    countReviewsMain += 2;
-    indexReviewsMain += 2;
-
-    const addMarkup = createReviewsList(data);
-    function createReviewsList(data) {
-      return data
-        .slice(indexReviewsMain, countReviewsMain)
-        .map((obj) => addReviews(obj))
-        .join("");
-    }
-
-    const prevElemByClickMore = e.target.previousElementSibling;
-
-    prevElemByClickMore.insertAdjacentHTML("beforeend", addMarkup);
-
-    if (countReviewsMain === data.length || countReviewsMain > data.length) {
-      this.classList.add("vissualy-hidden");
-    }
-  }
-}
-
+};
 showMoreButton.addEventListener("click", handleMoreReviews);
 
-// подгрузка всех отзывов приклике на  "Все отзывы"
+// // подгрузка всех отзывов приклике на  "Все отзывы"
 
-const showAllReviewsButton = document.querySelector(".reviews__button");
+const showAllReviews = (e) => {
+  const showItem = Array.from(
+    tabContentBottom.querySelectorAll(".reviews__item")
+  ).length;
+  indexReviewsMain === 0
+    ? createReviews(showItem, data.length)
+    : createReviews(showItem, data.length);
 
-showAllReviewsButton.addEventListener("click", showAllReviews);
+  countReviewsMain = showItem;
 
-function showAllReviews(e) {
-  createReviews(indexReviewsMain, data.length - indexReviewsMain, reviewsList);
   showMoreButton.disabled = true;
   showAllReviewsButton.disabled = true;
-}
+};
+showAllReviewsButton.addEventListener("click", showAllReviews);
 
-//  ======= отзывы tab
+// //  ======= отзывы tab
 
-const tabs = document.querySelector(".tab-4");
-const reviewsListTabs = tabs.querySelectorAll(".reviews__list");
-
-createReviews(0, data.length, reviewsListTabs);
+const tabsReviews = document.querySelector("[data-tab-reviews]");
+const reviewsListTabs = tabsReviews.querySelector(".reviews__list");
+const getTabReviews = data.slice(0, data.length);
+const reviewsTabMarkup = template(getTabReviews);
+reviewsListTabs.insertAdjacentHTML("afterbegin", reviewsTabMarkup);

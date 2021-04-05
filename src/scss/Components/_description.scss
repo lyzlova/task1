@@ -9,10 +9,6 @@
     @include font(18px, $permanent-dark-blue-color, 500, 30px);
   }
 
-  &__list {
-    list-style: none;
-  }
-
   &__item {
     position: relative;
     padding-left: 30px;

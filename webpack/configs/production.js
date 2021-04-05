@@ -1,22 +1,22 @@
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const webpack = require('webpack');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const webpack = require("webpack");
 
-module.exports = env => ({
-  devtool: 'source-map',
+module.exports = (env) => ({
+  devtool: "source-map",
   output: {
-    filename: '[name].[contenthash].js',
+    filename: "[name].[contenthash].js",
   },
   optimization: {
-    moduleIds: 'hashed',
-    runtimeChunk: 'single',
+    moduleIds: "hashed",
+    runtimeChunk: "single",
     splitChunks: {
       cacheGroups: {
         vendor: {
           test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
-          chunks: 'all',
+          name: "vendors",
+          chunks: "all",
         },
       },
     },
@@ -25,28 +25,29 @@ module.exports = env => ({
     rules: [
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
       },
       {
         test: /\.scss$/,
         use: [
           MiniCssExtractPlugin.loader,
-          'css-loader',
-          'postcss-loader',
-          'sass-loader',
+          "css-loader",
+          "postcss-loader",
+          "sass-loader",
         ],
       },
+      { test: /\.handlebars$/, loader: "handlebars-loader" },
     ],
   },
   plugins: [
     new webpack.ProvidePlugin({
-      '$': 'jquery',
-      jquery: 'jquery',
-      jQuery: 'jquery',
-      'window.$': 'jquery',
+      $: "jquery",
+      jquery: "jquery",
+      jQuery: "jquery",
+      "window.$": "jquery",
     }),
     new HtmlWebpackPlugin({
-      template: './index.html',
+      template: "./index.html",
       minify: {
         collapseWhitespace: true,
         removeComments: true,
@@ -57,8 +58,8 @@ module.exports = env => ({
       },
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css',
-      chunkFilename: '[name].[id].[contenthash].css',
+      filename: "[name].[contenthash].css",
+      chunkFilename: "[name].[id].[contenthash].css",
     }),
     new OptimizeCssAssetsPlugin({}),
   ],
